@@ -1,0 +1,15 @@
+Determinant = 7, x = -3, y = -1, z = 4
+Determinant = 7, x = 3, y = 1, z = 2
+Determinant = -40, x = 0.75, y = 0.40, z = -1.00
+Determinant = -13, x = 2, y = -1, z = 3
+Determinant = 0, NULL
+Determinant = 0, INFINITE
+Determinant = -10, x = 0, y = 0, z = 0
+Determinant = -7, x = 2, y = 1, z = -1
+Determinant = 0, INFINITE
+Determinant = 0, NULL
+Determinant = -416, x = 0.50, y = 0.25, z = 2.00
+Determinant = 0, INFINITE
+Determinant = 13, x = 1, y = 0, z = 0
+Determinant = 1600, x = 0.20, y = 0.50, z = 0.10
+Determinant = -5680, x = 0.25, y = -0.13, z = 0.50

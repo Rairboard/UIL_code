@@ -1,0 +1,398 @@
+23
+50
+4
+Frankie 5.00
+Frankie 5.00
+Johnny 2.00
+Johnny 12.00
+20
+3
+Frankie 5.00
+Johnny 10.00
+Frankie 5.00
+50
+3
+Johnny 2.27
+Johnny 3.00
+Frankie 2.00
+3500
+17
+Frankie 86.49
+Johnny 75.40
+Frankie 52.38
+Johnny 286.66
+Johnny 339.24
+Frankie 55.23
+Frankie 111.56
+Frankie 151.20
+Johnny 173.95
+Frankie 109.78
+Frankie 145.08
+Frankie 240.79
+Johnny 176.44
+Johnny 319.21
+Frankie 315.66
+Frankie 92.88
+Johnny 217.64
+4000
+17
+Johnny 82.81
+Frankie 335.36
+Johnny 61.54
+Frankie 137.82
+Johnny 240.23
+Frankie 307.50
+Johnny 188.11
+Frankie 183.04
+Johnny 347.57
+Frankie 156.00
+Frankie 210.40
+Johnny 272.90
+Frankie 326.10
+Johnny 110.47
+Johnny 380.14
+Frankie 111.83
+Frankie 136.06
+1500
+13
+Johnny 112.27
+Johnny 60.11
+Johnny 137.62
+Frankie 72.05
+Johnny 27.64
+Johnny 37.31
+Frankie 128.88
+Johnny 95.09
+Johnny 100.44
+Frankie 2.57
+Frankie 65.77
+Johnny 133.22
+Johnny 11.25
+3000
+20
+Frankie 161.06
+Johnny 268.70
+Frankie 74.67
+Frankie 174.94
+Frankie 168.64
+Frankie 43.12
+Frankie 76.27
+Frankie 102.29
+Frankie 12.26
+Frankie 20.50
+Johnny 127.86
+Johnny 108.13
+Johnny 48.87
+Johnny 60.05
+Johnny 246.18
+Johnny 17.82
+Johnny 128.32
+Frankie 272.48
+Johnny 260.10
+Frankie 161.80
+5000
+17
+Johnny 474.44
+Frankie 109.44
+Frankie 275.63
+Johnny 481.99
+Johnny 107.21
+Frankie 94.54
+Johnny 267.92
+Frankie 256.12
+Frankie 348.55
+Frankie 445.34
+Frankie 230.31
+Frankie 36.37
+Frankie 76.14
+Frankie 331.61
+Johnny 201.69
+Frankie 3.60
+Frankie 283.85
+3000
+17
+Johnny 142.74
+Frankie 194.03
+Frankie 215.30
+Johnny 187.15
+Frankie 224.89
+Johnny 86.26
+Frankie 218.80
+Johnny 197.07
+Johnny 150.84
+Johnny 36.35
+Johnny 234.56
+Frankie 166.64
+Frankie 133.26
+Johnny 152.49
+Frankie 252.74
+Johnny 14.60
+Johnny 271.30
+4000
+14
+Frankie 274.08
+Johnny 395.80
+Frankie 377.59
+Johnny 86.41
+Johnny 71.45
+Johnny 183.08
+Frankie 180.09
+Frankie 301.53
+Frankie 344.64
+Johnny 250.42
+Johnny 277.80
+Frankie 46.02
+Frankie 169.20
+Frankie 91.16
+2500
+11
+Frankie 128.19
+Frankie 153.40
+Johnny 189.68
+Johnny 109.51
+Frankie 140.23
+Frankie 190.63
+Frankie 199.76
+Johnny 229.89
+Frankie 74.40
+Frankie 24.07
+Frankie 167.30
+500
+16
+Frankie 11.07
+Frankie 6.34
+Johnny 19.39
+Frankie 13.59
+Frankie 24.08
+Frankie 1.00
+Frankie 27.64
+Frankie 24.02
+Frankie 22.08
+Frankie 26.72
+Frankie 42.74
+Johnny 17.75
+Johnny 31.09
+Frankie 10.16
+Frankie 10.74
+Johnny 9.70
+2000
+17
+Frankie 163.43
+Johnny 143.04
+Frankie 142.43
+Johnny 26.54
+Johnny 18.16
+Frankie 37.83
+Johnny 94.73
+Johnny 19.77
+Johnny 189.85
+Frankie 150.13
+Frankie 126.23
+Frankie 68.46
+Frankie 30.71
+Johnny 169.57
+Frankie 135.22
+Johnny 151.83
+Johnny 168.68
+1000
+17
+Frankie 72.64
+Johnny 30.24
+Frankie 26.50
+Johnny 21.36
+Johnny 23.62
+Johnny 23.41
+Frankie 61.28
+Johnny 65.59
+Johnny 88.50
+Johnny 31.62
+Johnny 93.05
+Johnny 35.43
+Johnny 24.93
+Frankie 31.39
+Johnny 45.39
+Frankie 29.41
+Frankie 33.94
+3000
+17
+Johnny 277.30
+Johnny 197.35
+Johnny 47.43
+Johnny 250.88
+Frankie 249.33
+Frankie 9.09
+Frankie 267.58
+Johnny 42.94
+Frankie 36.95
+Frankie 56.44
+Frankie 201.99
+Johnny 98.78
+Frankie 95.99
+Frankie 182.78
+Johnny 120.03
+Johnny 292.70
+Johnny 138.03
+4000
+18
+Johnny 110.50
+Johnny 160.68
+Johnny 123.29
+Frankie 183.33
+Frankie 150.48
+Frankie 244.18
+Johnny 128.90
+Frankie 122.31
+Johnny 166.55
+Johnny 252.48
+Johnny 375.58
+Frankie 218.68
+Johnny 337.63
+Frankie 117.20
+Johnny 10.68
+Johnny 32.05
+Johnny 245.25
+Frankie 272.19
+3500
+18
+Johnny 48.87
+Frankie 90.15
+Frankie 6.44
+Frankie 95.06
+Frankie 177.64
+Frankie 83.41
+Johnny 236.66
+Frankie 146.53
+Johnny 130.02
+Frankie 77.74
+Frankie 349.38
+Johnny 210.64
+Frankie 298.87
+Johnny 151.48
+Frankie 83.73
+Frankie 76.25
+Johnny 234.06
+Johnny 285.66
+3500
+20
+Frankie 210.93
+Johnny 232.35
+Johnny 244.03
+Johnny 313.54
+Frankie 80.22
+Frankie 28.77
+Frankie 47.97
+Frankie 332.70
+Frankie 33.14
+Johnny 269.62
+Frankie 175.30
+Frankie 190.80
+Frankie 133.42
+Frankie 22.42
+Johnny 301.91
+Johnny 93.40
+Frankie 61.90
+Frankie 325.05
+Frankie 106.57
+Johnny 232.44
+4500
+20
+Frankie 113.31
+Johnny 182.72
+Johnny 71.79
+Johnny 57.03
+Frankie 59.32
+Frankie 227.09
+Johnny 83.40
+Frankie 32.98
+Frankie 314.80
+Johnny 39.94
+Frankie 153.79
+Frankie 86.53
+Frankie 84.05
+Frankie 244.51
+Johnny 399.30
+Frankie 58.40
+Frankie 102.29
+Johnny 323.12
+Johnny 168.01
+Frankie 366.07
+4000
+18
+Frankie 383.03
+Frankie 294.30
+Johnny 132.31
+Frankie 96.56
+Johnny 303.14
+Johnny 384.10
+Frankie 273.74
+Frankie 180.41
+Johnny 363.61
+Johnny 118.36
+Frankie 148.39
+Frankie 69.82
+Johnny 354.00
+Frankie 21.72
+Frankie 12.48
+Frankie 57.61
+Frankie 212.73
+Johnny 310.20
+1500
+16
+Johnny 63.86
+Frankie 93.82
+Johnny 31.22
+Frankie 107.99
+Frankie 5.01
+Frankie 135.92
+Johnny 122.89
+Johnny 103.42
+Frankie 1.78
+Frankie 121.44
+Frankie 40.70
+Frankie 98.75
+Johnny 51.49
+Johnny 97.41
+Frankie 36.27
+Frankie 25.08
+5000
+20
+Johnny 224.38
+Frankie 396.15
+Johnny 446.63
+Frankie 335.29
+Johnny 168.67
+Frankie 264.44
+Frankie 276.66
+Frankie 75.13
+Johnny 338.15
+Johnny 65.66
+Frankie 257.54
+Johnny 0.78
+Johnny 164.04
+Frankie 454.13
+Johnny 138.11
+Frankie 47.13
+Frankie 166.54
+Johnny 29.49
+Johnny 203.22
+Frankie 118.07
+4000
+18
+Frankie 228.14
+Johnny 67.56
+Frankie 77.36
+Frankie 154.97
+Frankie 257.18
+Johnny 106.12
+Johnny 96.50
+Frankie 200.08
+Johnny 222.68
+Johnny 23.05
+Johnny 124.15
+Johnny 268.57
+Johnny 191.54
+Johnny 193.80
+Frankie 227.49
+Frankie 273.53
+Johnny 353.66
+Frankie 380.30
