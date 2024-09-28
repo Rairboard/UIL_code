@@ -24,19 +24,30 @@ public class carol {
 			String orig = f.nextLine();
 			String ln = orig.toLowerCase();
 			if (ln.equals(new StringBuilder(ln).reverse().toString())) {
-				out.println("0 character(s) need to be added to convert "+ln+" into a palindrome.");
+				out.println("0 character(s) need to be added to convert "+orig+" into a palindrome.");
 			}
 			else{
-				int max = Integer.MAX_VALUE;
-				for (int i = 0; i < ln.length(); i++) {
-					String a = new StringBuilder(ln.substring(0,i+1)).reverse().toString();
-					String b = ln.substring(i);
-					if (a.matches(b + ".+") || b.matches(a + ".*")) {
-						max = Math.min(max,Math.abs(a.length()-b.length()));
+				int save = -1;
+				String reverse = new StringBuilder(orig.toLowerCase()).reverse().toString();
+				for(int i = reverse.length()-1;i>-1;i--){
+					String a = ln.substring(0,i+1);
+					String b = reverse.substring(0,i+1);
+					if(a.equals(new StringBuilder(a).reverse().toString())){
+						save = ln.length()-i-1;
+						break;
+					}
+					if (b.equals(new StringBuilder(b).reverse().toString())) {
+						save = reverse.length()-i-1;
+						break;
 					}
 				}
-				max  = Math.min(max,ln.length()-1);
-				out.println(max + " character(s) need to be added to convert " + orig + " into a palindrome.");
+				if(save!=-1){
+					out.print(save);
+				}
+				else{
+					out.print(ln.length()-1);
+				}
+				out.println(" character(s) need to be added to convert " + orig + " into a palindrome.");
 			}
         }
         f.close();
