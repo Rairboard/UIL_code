@@ -12,8 +12,7 @@ import static java.lang.Double.*;
 import static java.lang.Math.*;
 
 public class little {
-    List<String> hand = new ArrayList<>(Arrays.asList("PAIR,FLUSH,HIGH CARD".split(",")));
-    List<String> rank = new ArrayList<>(Arrays.asList("Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King,Ace".split(",")));
+    List<String> al = new ArrayList<>(Arrays.asList("Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King,Ace".split(",")));
     public static void main(String[] args) throws Exception {
         new little().run();
     }
@@ -25,65 +24,86 @@ public class little {
         f.nextLine();
         while (times-- > 0) {
             int n = f.nextInt();
-            List<Hand> al = new ArrayList<>();
+            List<Item> list = new ArrayList<>();
             f.nextLine();
             for (int i = 0; i < n; i++) {
-                String[] ln = f.nextLine().split(",\\s+");
-                al.add(new Hand(ln[0],ln[1]));
+                String[] ln = f.nextLine().trim().split(", ");
+                String[] a = ln[0].split("\\s+");
+                String[] b = ln[1].split("\\s+");
+                list.add(new Item(a[0],a[2],b[0],b[2]));
             }
-            Collections.sort(al);
-            int qualify = 0;
-            for (int i = 0; i < al.size(); i++) {
-                if(al.get(0).compareTo(al.get(i))==00){
-                    qualify++;
+            Collections.sort(list);
+            out.println(list);
+            Item last = list.get(list.size()-1);
+            if(last.pair){
+                int cnt = 0;
+                for (int i = 0; i < list.size(); i++) {
+                    if(list.get(i).pair){
+                        cnt++;
+                    }
                 }
+                out.println("PAIR " + cnt);
             }
-            out.println(hand.get(al.get(0).in) +" " + qualify);
-//            Set<String> hs = new HashSet<>();
-//            hs.add(al.get(0).toString());
-//            for (int i = 1; i < al.size(); i++) {
-//                if(al.get(0).compareTo(al.get(i))==0){
-//                    hs.add(al.get(i).toString());
-//                }
-//            }
-//            out.println(hs);
-//            out.println(hand.get(al.get(0).in) + " " + hs.size());
+            else if(last.flush){
+                int cnt = 0;
+                for (int i = 0; i < list.size() ; i++) {
+                    if(list.get(i).flush){
+                        cnt++;
+                    }
+                }
+                out.println("FLUSH " + cnt);
+            }else{
+                int cnt = 0;
+                for (int i = 0; i < list.size(); i++) {
+                    if(!list.get(i).pair&&!list.get(i).flush){
+                        cnt++;
+                    }
+                }
+                out.println("HIGH CARD " + cnt);
+            }
+
         }
         f.close();
     }
-    class Hand implements Comparable<Hand>{
-        String[] a, b;
-        int in;
-        public Hand(String one,String two){
-            String[] line1 = one.split("\\s+of\\s+");
-            String[] line2 = two.split("\\s+of\\s+");
-            if(line1[0].equals(line2[0])){
-                in = 0;
-            }
-            else if(line1[1].equals(line2[1])){
-                in= 1;
-            }
-            else{
-                in = 2;
-            }
-            a = line1;
-            b = line2;
+    class Item implements Comparable<Item>{
+        boolean pair, flush;
+        String a_card,b_card,a_suit,b_suit;
+        public Item(String a, String b, String c, String d) {
+            a_card = a;
+            a_suit = b;
+            b_card = c;
+            b_suit = d;
+            pair = a_card.equals(b_card);
+            flush = a_suit.equals(b_suit);
         }
-        public int compareTo(Hand o){
-            if(in == o.in){
-                int one = Math.max(rank.indexOf(a[0]),rank.indexOf(b[0]));
-                int two = Math.max(rank.indexOf(o.a[0]),rank.indexOf(o.b[0]));
-                if(in == 2 || in == 3){
-                    if(one==two){
-                        return rank.indexOf(o.b[0]) - rank.indexOf(b[0]);
-                    }
-                }
-                return two - one;
+        public int compareTo(Item o){
+            if(pair && o.pair){
+                return al.indexOf(a_card) - al.indexOf(o.a_card);
             }
-            return in - o.in;
+            if(flush && o.flush){
+                int a = Math.max(al.indexOf(a_card), al.indexOf(b_card));
+                int b = Math.max(al.indexOf(o.a_card), al.indexOf(o.b_card));
+                if(a==b){
+                    return al.indexOf(b_card) - al.indexOf(o.b_card);
+                }
+                return a-b;
+            }
+            if(pair){
+                return 1;
+            }
+            if(flush){
+                return 1;
+            }
+            if(!pair && o.pair){
+                return -1;
+            }
+            if(!flush && o.flush){
+                return -1;
+            }
+            return 0;
         }
         public String toString(){
-            return hand.get(in) + ": " + Arrays.toString(a) +" " + Arrays.toString(b);
+            return a_card + "-" + a_suit + " | " + b_card + "-" +b_suit;
         }
     }
 }

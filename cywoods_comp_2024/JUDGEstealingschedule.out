@@ -1,0 +1,22 @@
+Order: School_A
+Max Profit: $50
+Order: School_X School_Z
+Max Profit: $160
+Order: Delta Gamma
+Max Profit: $90
+Order: A B C D E
+Max Profit: $500
+Order: W X
+Max Profit: $350
+Order: Empty_School Null_School Zero_Profit
+Max Profit: $0
+Order: S1 S10 S2 S3 S4 S5 S6 S7 S8 S9
+Max Profit: $550
+Order: School School School
+Max Profit: $210
+Order: A B C
+Max Profit: $450
+Order: First_School
+Max Profit: $300
+Order: Eta_55 Gamma_99 Iota_81 Mu_84 Phi_21 Pi_88 Rho_17 Sigma_42 Sigma_90 Tau_67
+Max Profit: $3570
