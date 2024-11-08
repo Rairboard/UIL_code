@@ -15,9 +15,11 @@ public class get_ThanhLe {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("get").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-		while(f.hasNext()){
+		int times = f.nextInt();
+		f.nextLine();
+		while(times-->0){
 			int N = f.nextInt(), sl = -1, sr = -1, sc = -1;
-			f.nextLine();
+			if(f.hasNext()) f.nextLine();
 			 m = new char[N][N][N];
 			shadow = new int[N][N][N];
 			for (int i = 0; i < N; i++) {

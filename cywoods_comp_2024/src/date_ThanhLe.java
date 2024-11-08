@@ -16,7 +16,6 @@ public class date_ThanhLe {
             Calendar c = new GregorianCalendar(y,m,d);
             int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
             c.add(Calendar.DATE,1);
-            System.out.println(c.get(Calendar.MONTH) + 1 + " " + c.get(Calendar.DATE) + " " + c.get(Calendar.YEAR));
             if( dayOfWeek>=2 && dayOfWeek<=6 && c.get(Calendar.DAY_OF_MONTH)==1){
                 System.out.println("TODAY IS THE DAY!");
             }
