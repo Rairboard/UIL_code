@@ -13,7 +13,9 @@ import static java.lang.Math.*;
 
 public class arrow {
     public static void main(String[] args) throws Exception {
-        new arrow().run();
+        Calendar c = new GregorianCalendar(2024, 12, 7);
+        out.println(new SimpleDateFormat("MMMM/dd/yyyy").format(c.getTime()));
+//        new arrow().run();
     }
 
     public void run() throws Exception {

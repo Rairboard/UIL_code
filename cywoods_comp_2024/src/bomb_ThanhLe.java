@@ -22,43 +22,42 @@ public class bomb_ThanhLe {
         int times = f.nextInt();
         f.nextLine();
         for (int asdf = 1; asdf <= times; asdf++) {
-			List<Pair> pq = new ArrayList<>();
+			PriorityQueue<Pair> pq = new PriorityQueue<>();
 			int n = f.nextInt(), k = f.nextInt();
 			f.nextLine();
-			int[] A = new int[n];
-			int[] B = new int[n];
+			long[] A = new long[n];
+			long[] B = new long[n];
 			for (int i = 0; i < n; i++) {
-				A[i] = f.nextInt();
+				A[i] = f.nextLong();
 			}
 			for (int i = 0; i < n; i++) {
-				B[i] = f.nextInt();
+				B[i] = f.nextLong();
 			}
 			for (int i = 0; i < n; i++) {
 				pq.add(new Pair(A[i],B[i]));
 			}
-			int total = 0;
+			long total = 0;
 			for (int i = 0; i < k; i++) {
-				Pair p = pq.get(pq.size()-1);
+				Pair p = pq.poll();
 				total+=p.ai;
-				p.ai = Math.max(0,p.ai - p.bi);
-				Collections.sort(pq);
+				long maxCur = Math.max(0,p.ai-p.bi);
+				pq.offer(new Pair(maxCur,p.bi));
 			}
 			out.println(total);
         }
         f.close();
     }
 	class Pair implements Comparable<Pair>{
-		int ai, bi;
-		public Pair(int a, int b){
+		long ai, bi;
+		public Pair(long a, long b){
 			ai = a;
 			bi = b;
-
 		}
 		public int compareTo(Pair p){
 			if(ai==p.ai){
-				return bi-p.bi;
+				return Long.compare(p.bi,bi);
 			}
-			return ai - p.ai;
+			return Long.compare(p.ai,ai);
 		}
 		public String toString(){
 			return "[" + ai + ":" + bi + "]";

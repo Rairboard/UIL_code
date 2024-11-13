@@ -15,7 +15,7 @@ public class logistics_ThanhLe {
     }
 
     public void run() throws Exception {
-        Scanner f = new Scanner(new File(("JUDGElogistics").toLowerCase() + ".dat"));
+        Scanner f = new Scanner(new File(("logistics").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
