@@ -19,11 +19,12 @@ public class claudius {
         for (int asdf = 1; asdf <= times; asdf++) {
             int r = f.nextInt(), c = f.nextInt(), h = f.nextInt();
 			f.nextLine();
-            int sr = 0, sc = 0;
+            int sr = -1, sc = -1, er = -1, ec = -1;
             min = Integer.MAX_VALUE;
             m = new char[r][c];
             shadow = new int[r][c];
             solved = false;
+			List<int[]> pos = new ArrayList<>();
             for (int i = 0; i < m.length; i++) {
                 Arrays.fill(shadow[i], Integer.MAX_VALUE);
                 String s = f.nextLine();
@@ -32,66 +33,69 @@ public class claudius {
                     sr = i;
                     sc = s.indexOf("S");
                 }
-            }
-			for (int i = 0; i < m.length; i++) {
+				if (s.contains("E")) {
+					er = i;
+					ec = s.indexOf("E");
+				}
 				for (int j = 0; j < m[i].length; j++) {
-					if(m[i][j]=='A'){
-						int[] vr = {-1,1,0,0};
-						int[] vc = {0,0,-1,1};
-						for (int k = 0; k < 4; k++) {
-							int nr = vr[k] + i;
-							int nc = vc[k] + j;
-							if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length && m[nr][nc]!='A'){
-								m[nr][nc]='R';
-							}
-						}
+					if(m[i][j]=='A' || m[i][j]=='B'||m[i][j]=='Q'){
+						pos.add(new int[]{i,j});
 					}
-					if(m[i][j]=='B'){
-						int[] vr = {-2,2,0,0};
-						int[] vc = {0,0,-2,2};
-						for (int k = 0; k < 4; k++) {
-							int nr = vr[k] + i;
-							int nc = vc[k] + j;
-							if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length && m[nr][nc]!='B'){
-								m[nr][nc]='R';
+				}
+            }
+			for(int[] coor : pos){
+				int row = coor[0], col = coor[1];
+				if(m[row][col]=='A'){
+					for (int i = -1; i <= 1; i++) {
+						for(int j = -1;j <= 1;j++){
+							int nr = row + i;
+							int nc = col + j;
+							if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length){
+								m[nr][nc] = 'R';
 							}
 						}
 					}
 				}
+				else if(m[row][col]=='B'){
+					for (int i = -2; i <= 2; i++) {
+						for(int j = -2;j <= 2;j++){
+							int nr = row + i;
+							int nc = col + j;
+							if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length){
+								m[nr][nc] = 'R';
+							}
+						}
+					}
+				}
+				else{
+					boolean safe = false;
+					for (int i = -1; i <= 1; i++) {
+						for(int j = -1;j <= 1;j++){
+							int nr = row + i;
+							int nc = col + j;
+							if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length && m[nr][nc]=='T'){
+								safe = true;
+							}
+						}
+					}
+					if(!safe){
+						m[row][col] = 'R';
+					}
+				}
 			}
-			for(char[]cc : m){
-				System.out.println(cc);
-			}
-            recur(sr, sc, 0);
-//			for (int i = 0; i < shadow.length; i++) {
-//				System.out.println(Arrays.toString(shadow[i]));
-//			}
-//			System.out.println();
-			System.out.println(min <= h ? "Free at last, Free at last. " + (h-min) + " hour(s) to spare.":"Smokey the Bear is en route.");
+			recur(sr, sc, 0);
+			System.out.println(shadow[er][ec] <= h ? "Free at last, Free at last. " + (h-shadow[er][ec]) + " hour(s) to spare.":"Smokey the Bear is en route.");
         }
         f.close();
     }
 
     public void recur(int r, int c, int step) {
-        if ( r >= 0 && c >= 0 && r < m.length && c < m[r].length && "MTQ.SE".contains(m[r][c]+"") && step < shadow[r][c]) {
+        if ( r >= 0 && c >= 0 && r < m.length && c < m[r].length && !"RV".contains(m[r][c]+"") && step < shadow[r][c]) {
+			shadow[r][c] = step;
 			if (m[r][c] == 'E') {
 				min = step;
 				return;
 			}
-			if(m[r][c]=='Q'){
-				int[] vr = {-1,1,0,0};
-				int[] vc = {0,0,-1,1};
-				boolean check = false;
-				for (int k = 0; k < 4; k++) {
-					int nr = vr[k] + r;
-					int nc = vc[k] + c;
-					if(nr>=0&&nc>=0&&nr<m.length&&nc<m[nr].length && m[nr][nc]=='T'){
-						check = true;
-					}
-				}
-				if(!check) return;
-			}
-			shadow[r][c] = step;
 			int add = 1;
 			if(m[r][c]=='M' || m[r][c] == 'Q'){
 				add = 3;

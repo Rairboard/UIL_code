@@ -23,70 +23,70 @@ public class manisha {
         f.nextLine();
         while (times-- > 0) {
             String[] ln = f.nextLine().replaceAll("\\s+","").split("\\+");
-            List<Whole> al = new ArrayList<>();
+            List<Item> al = new ArrayList<>();
             for (int i = 0; i < ln.length; i++) {
-                List<Product> asdf = new ArrayList<>();
+                List<Individual> asdf = new ArrayList<>();
                 for (int j = 0; j < ln[i].length(); j++) {
                     if(ln[i].charAt(j)=='/'){
-                        asdf.add(new Product(ln[i].substring(j,j+2)));
+                        asdf.add(new Individual(ln[i].substring(j,j+2)));
                         j++;
                     }
                     else{
-                        asdf.add(new Product(ln[i].substring(j,j+1)));
+                        asdf.add(new Individual(ln[i].substring(j,j+1)));
                     }
                 }
                 Collections.sort(asdf);
-                String s = "";
-                for (int j = 0; j < asdf.size(); j++) {
-                    s+=asdf.get(j).n;
+                String word = "";
+                for(Individual in : asdf){
+                    word+=in.name;
                 }
-                al.add(new Whole(s));
+                al.add(new Item(word));
             }
             Collections.sort(al);
-            for(int i=0;i<al.size();i++){
-                if(i==al.size()-1){
-                    out.print(al.get(i).n);
+            for (int i = 0; i < al.size(); i++) {
+                if(i<al.size()-1){
+                    out.print(al.get(i).name+"+");
                 }
                 else{
-                    out.print(al.get(i).n+"+");
+                    out.println(al.get(i).name);
                 }
             }
-            out.println();
         }
         f.close();
     }
-    class Product implements Comparable<Product>{
-        String n, alp;
-        int sl;
-        public Product(String orig) {
-            n = orig;
-            alp = orig.replaceAll("[^a-zA-Z]", "");
-            sl = alp.indexOf("/");
+    class Item implements Comparable<Item>{
+        String name;
+        int s;
+        String without;
+        public Item(String n){
+            name = n;
+            s = n.indexOf("/");
+            without = name.replaceAll("/","");
         }
-        public int compareTo(Product o){
-            if(alp.compareTo(o.alp)==0){
-                return sl - o.sl;
-            }
-            return alp.compareTo(o.alp);
-        }
-    }
-    class Whole implements Comparable<Whole>{
-        String n, alp;
-        int sl ;
-        public Whole(String orig){
-            n = orig;
-            alp = orig.replaceAll("[^a-zA-Z]", "");
-            sl = alp.indexOf("/");
-        }
-        public int compareTo(Whole o){
-            if(alp.length()==o.alp.length()){
-                if(alp.compareTo(o.alp)==0){
-                    return sl - o.sl;
+        public int compareTo(Item o){
+            if (without.length() == o.without.length()) {
+                if (without.compareTo(o.without)==0) {
+                    return s - o.s;
                 }
-                return alp.compareTo(o.alp);
+                return without.compareTo(o.without);
             }
-            return alp.length()-o.alp.length();
+            return without.length() - o.without.length();
         }
     }
-
+    class Individual implements Comparable<Individual>{
+        String name;
+        int s;
+        String without;
+        public Individual(String n){
+            name = n;
+            s = name.indexOf("/");
+            without = n.replaceAll("/","");
+        }
+        public int compareTo(Individual o){
+            if(without.compareTo(o.without)==0){
+                return s - o.s;
+            }
+            return without.compareTo(o.without);
+        }
+    }
 }

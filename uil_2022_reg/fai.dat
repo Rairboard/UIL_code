@@ -1,37 +1,33 @@
-9
-City A,City B,City C,City D,City E,City F
-City A
-City A<->City B,City A<->City C,City A<->City E,City A<->City D,City B<->City C,City C<->City F,City C<->City E,City F<->City E,City E<->City D
+8
+A,B,C,D,E,F,G,H
+C
+A<->B,A<->C,B<->C,B<->D,B<->F,C<->E,C<->G,E<->G,G<->F,G<->H,H<->F,F<->D
 --------------------
-Town 0,Town 1,Town 2,Town 3,Town 4
-Town 3
-Town 1<->Town 2,Town 1<->Town 0,Town 2<->Town 0,Town 0<->Town 4,Town 0<->Town 3,Town 3<->Town 4
+A,B,C,D,E,F,G,H
+C
+A<->B,A<->C,B<->C,B<->D,B<->F,C<->E,C<->G,E<->G,G<->F,H<->F,F<->D
 --------------------
-Dallas,San Antonio,Houston,El Paso,Austin
-Houston
-Dallas<->San Antonio,Dallas<->Houston,Dallas<->El Paso,Dallas<->Austin,San Antonio<->Houston,San Antonio<->El Paso,San Antonio<->Austin,El Paso<->Austin
+A,B,C,D,E,F,G,H
+D
+A<->B,A<->C,C<->B,C<->D,C<->E,D<->F,E<->F,F<->G,F<->H,G<->H
 --------------------
-Wall,College Station,San Angelo
-Wall
-Wall<->College Station,College Station<->San Angelo,San Angelo<->Wall
+A,B,C,D,E,F,G,H
+D
+A<->C,C<->B,C<->D,C<->E,D<->F,E<->F,F<->G,F<->H,G<->H
 --------------------
-Lubbock,Loredo,Lampasas,Liberty Hill,Lago Vista
-Lubbock
-Lubbock<->Loredo,Lubbock<->Lampasas,Lubbock<->Liberty Hill,Lubbock<->Lago Vista
+A,B,C,D,E
+E
+A<->B,B<->C,C<->D,E<->D,A<->E
 --------------------
-Abilene,Beaumont,Childress,Dalhart,Eden,Fort Worth
-Beaumont
-Abilene<->Fort Worth,Abilene<->Eden,Abilene<->Childress,Abilene<->Beaumont,Beaumont<->Childress,Childress<->Dalhart,Childress<->Eden,Dalhart<->Eden,Eden<->Fort Worth
+A,B,C,D,E
+E
+A<->B,B<->C,C<->D,E<->D,A<->E,E<->B
 --------------------
-Alice,Big Spring,Colorado City,Denton,Eagle Pass,Frenship,Goliad
-Frenship
-Alice<->Big Spring,Alice<->Colorado City,Big Spring<->Colorado City,Big Spring<->Denton,Big Spring<->Eagle Pass,Colorado City<->Denton,Colorado City<->Frenship,Denton<->Eagle Pass,Denton<->Frenship,Frenship<->Eagle Pass,Frenship<->Goliad,Eagle Pass<->Goliad
+A,B,C,D,E
+A
+A<->B,B<->C,C<->D,E<->D,A<->E,A<->C,B<->E,C<->E,D<->B,D<->A
 --------------------
-Caldwell,Bryan,Navasota,Hempstead,Franklin,Calvert
-Bryan
-Caldwell<->Bryan,Bryan<->Navasota,Navasota<->Hempstead,Hempstead<->Franklin,Franklin<->Calvert,Calvert<->Hempstead,Bryan<->Calvert
---------------------
-Texline,Brownsville
-Texline
-Texline<->Brownsville
+A,B,C,D,E
+A
+A<->B,B<->C,C<->D,E<->D,A<->E,A<->C
 --------------------

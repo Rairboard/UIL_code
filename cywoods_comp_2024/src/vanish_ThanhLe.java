@@ -1,23 +1,15 @@
 import java.util.*;
-import java.io.*;
-import java.io.FileNotFoundException;
 import java.io.File;
-import java.text.*;
-import java.math.*;
-import java.util.Arrays;
 
 import static java.lang.System.*;
-import static java.lang.Integer.*;
-import static java.lang.Double.*;
-import static java.lang.Math.*;
 
-public class bomb_ThanhLe {
+public class vanish_ThanhLe {
     public static void main(String[] args) throws Exception {
-        new bomb_ThanhLe().run();
+        new vanish_ThanhLe().run();
     }
 
     public void run() throws Exception {
-        Scanner f = new Scanner(new File(("bomb").toLowerCase() + ".dat"));
+        Scanner f = new Scanner(new File(("vanish").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
@@ -55,7 +47,7 @@ public class bomb_ThanhLe {
 		}
 		public int compareTo(Pair p){
 			if(ai==p.ai){
-				return Long.compare(p.bi,bi);
+				return Long.compare(bi,p.bi);
 			}
 			return Long.compare(p.ai,ai);
 		}
