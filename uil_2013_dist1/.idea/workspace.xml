@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7dd92675-fe51-4dce-aa67-6ebc177a1d2c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../2013_dist2/2013_dist2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/admissions.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/admissions.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/casting.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/casting.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/classes.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/classes.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/clements_2024.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/crawl.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/funding.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/funding.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/graduation.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/graduation.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/ordering.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/ordering.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/premiere.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/premiere.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/reviews.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/reviews.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/screen.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/screen.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/screenplay.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/screenplay.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/set.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/set.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/casting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/classes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/funding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/ordering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/premiere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/reviews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/testing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clements_2024/src/testing2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cywoods_comp_2024/src/banksort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2010_dist2/uil_2010_dist2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2010_state/uil_2010_state.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2011_dist1/src/blobcount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2011_dist1/uil_2011_dist2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2011_reg/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2011_reg/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_dist1/uil_2014_dist1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_dist2/uil_2014_dist2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/candyfest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/candyfest.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/commonnames.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/commonnames.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/compare" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/connectfour.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/connectfour.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/family.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/family.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/farkle.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/farkle.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/flag.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/flag.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/gameoflife.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/gameoflife.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/obstacles.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/obstacles.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/roman.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/roman.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/series.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/series.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/Ciao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/candyfest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/commonnames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/connectfour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/family.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/farkle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/flag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/gameoflife.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/obstacles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/roman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/series.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/src/triple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/triple.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/triple.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invA/uil_2014_invA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_invB/uil_2014_invB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_reg/uil_2014_reg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2014_state/uil_2014_state.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2018_invB/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/andrei.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/charles.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/charles.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/compare" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/dmitry.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/dmitry.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/fatima.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/fatima.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/frances.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/frances.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/honghui.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/honghui.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/manuel.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/manuel.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/michelle.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/michelle.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/prateek.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/prateek.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/richard.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/richard.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/sanjay.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/sanjay.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/andrei.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/charles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/dmitry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/fatima.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/michelle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/prateek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/richard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/urvashi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/uil_2022_state.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/urvashi.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/urvashi.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/bogdan.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/christine.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/compare" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/george.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/hisoka.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/janice.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/krishna.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/liza.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/miguel.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/patrick.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/shreya.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/Vanessa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/bogdan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/christine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/george.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/hishoka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/janice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/krishna.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/liza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/miguel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/patrick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/shreya.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/src/sunil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/sunil.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/uil_2023_dist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2023_dist/vanessa.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/Aliases.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2024/Aliases.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/Aliases.out" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2024/Aliases.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/compare" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2024/compare" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/src/Trap_ThanhLe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2024/src/Trap_ThanhLe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/src/bankSort_ThanhLe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2024/trap.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2024/trap.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2011_reg/src/wordsearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2011_reg/src/wordsearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2011_reg/words.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/family.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2018_invB/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2018_invB/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2018_invB/src/peter_dp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2018_invB/src/peter_dp.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="uil.dat" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rK86YGwWYTTYRcBh2vCpdp0l6D" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.diceroll.executor": "Run",
+    "Application.family.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7dd92675-fe51-4dce-aa67-6ebc177a1d2c" name="Changes" comment="" />
+      <created>1736296240215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736296240215</updated>
+    </task>
+    <servers />
+  </component>
+</project>

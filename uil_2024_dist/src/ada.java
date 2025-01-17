@@ -15,7 +15,6 @@ public class ada {
     public static void main(String[] args) throws Exception {
         new ada().run();
     }
-
     public void run() throws Exception {
 		out.println("Ada Lovelace – World's First Computer Programmer!");
     }

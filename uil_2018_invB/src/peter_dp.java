@@ -13,27 +13,53 @@ import static java.lang.Math.*;
 
 public class peter_dp {
     public static void main(String[] args) throws Exception {
-        new peter_dp().run();
+//        new peter_dp().run();
     }
 
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("peter").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
         while(f.hasNext()){
-			int tgt = f.nextInt();
-			f.nextLine();
-			int[] coin = Arrays.stream(f.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-			int[] dp = new int[tgt+1];
-			Arrays.fill(dp,tgt+1);
-			dp[0] = 0;
-			for (int i = 1; i <= tgt; i++) {
-				for (int j = 0; j < coin.length; j++) {
-					if(coin[j]<= i){
-						dp[i] = Math.min(dp[i],1 + dp[i-coin[j]]);
+			int tgt = f.nextInt(); f.nextLine();
+			int[] coin = Arrays.stream(f.nextLine().trim().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+			int n = coin.length;
+			int[][] dp = new int[n+1][tgt+1];
+			for (int i = 0; i < dp.length; i++) {
+				Arrays.fill(dp[i], tgt+1);
+			}
+			for(int i = 0;i <= n;i++){
+				for(int j = 0;j<= tgt;j++){
+					if(i==0 || j == 0){
+						dp[i][j] = 0;
+
+                    }
+					else if(coin[i-1] <= j){
+						int before = dp[i][j];
+						dp[i][j] = Math.min(dp[i][j], dp[i][j-coin[i-1]] + 1);
+//						if(dp[i][j]!=before){
+//						}
+					}
+					else{
+						dp[i][j] = dp[i-1][j];
 					}
 				}
 			}
-			out.println(dp[tgt]);
+			List<Integer> al = new ArrayList<>();
+			int sum = tgt;
+			for(int i = n;i>0 && sum > 0;i--){
+				if(dp[i][sum]!=dp[i-1][sum]){
+					for (int j = 0; j < sum/coin[i - 1]; j++) {
+						al.add(coin[i-1]);
+					}
+					sum%=coin[i-1];
+				}
+			}
+			Collections.sort(al);
+			out.print(tgt + " " + dp[n][tgt] + " ");
+			for(int i = 0 ;i < al.size();i++){
+				out.print(al.get(i)+" ");
+			}
+			out.println();
 		}
         f.close();
     }

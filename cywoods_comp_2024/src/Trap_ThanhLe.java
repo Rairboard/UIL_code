@@ -73,6 +73,10 @@ public class Trap_ThanhLe {
                 for(int j = bottom;j>=top;j--) {
                     if(valid(j,left)) m[j][left] = al.remove(0);
                 }
+                for(char[] cc : m){
+                    System.out.println(cc);
+                }
+                System.out.println();
             }
             if(sr==er){
                 if(sc < ec){
