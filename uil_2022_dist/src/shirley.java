@@ -31,7 +31,7 @@ class shirley{
 	                   treeCount = 0;
 	                   countingTrees(i,j);
 	                   if(cluster_size>1){
-	                       tm.put(treeCount,Double.parseDouble(String.format("%.1f",(double)cluster_size/lot_size*100)));
+	                       tm.put(treeCount,Double.parseDouble(String.format("%.1f",cluster_size/lot_size*100)));
 	                   }
 	               }
 	           }

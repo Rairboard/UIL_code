@@ -13,7 +13,7 @@ import static java.lang.Math.*;
 
 public class audrey {
     public static void main(String[] args) throws Exception {
-        out.println("U.........U.........U\n" +
+       /* out.println("U.........U.........U\n" +
                 ".I........I........I.\n" +
                 "..L.......L.......L..\n" +
                 "...C......C......C...\n" +
@@ -33,7 +33,8 @@ public class audrey {
                 "...C......C......C...\n" +
                 "..L.......L.......L..\n" +
                 ".I........I........I.\n" +
-                "U.........U.........U\n");
+                "U.........U.........U\n");*/
+        out.printf("");
     }
 
 }

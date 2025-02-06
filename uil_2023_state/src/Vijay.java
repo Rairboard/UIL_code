@@ -12,139 +12,90 @@ import static java.lang.Double.*;
 import static java.lang.Math.*;
 
 public class Vijay {
-    char[][][] m;
-    int[][][] identity;
-    int[][][] shadow;
-    int min;
-    boolean solved;
-    HashMap<Integer,List<Point>> hm;
-    public static void main(String[] args) throws Exception {
+    int[][][][] shadow;
+    char[][][]m;
+    public static void main(String[] args)throws Exception {
         new Vijay().run();
     }
-
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("Vijay").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
         while (times-- > 0) {
-            int l = f.nextInt(), r = f.nextInt(), c = f.nextInt(), o = f.nextInt(),t = f.nextInt();
-            int sl = -1, sr = -1, sc = -1,O = 1;
-            f.nextLine();
-            m =new char [l][r][c];
-            shadow = new int[l][r][c];
-            identity = new int[l][r][c];
-            min = Integer.MAX_VALUE;
-            solved = false;
-            hm = new HashMap<>();
-            // loc list for storing position of starting, ending, and cds
-            List<Point> loc = new ArrayList<>();
-            for (int ll = 0; ll < l; ll++) {
-                for (int i = 0; i < r; i++) {
-                    String ln = f.nextLine();
-                    for (int j = 0; j < ln.length(); j++) {
-                        if(ln.charAt(j)=='S'){
-                            sl = ll;
-                            sr = i;
-                            sc = j;
-                            loc.add(new Point(ll,i,j));
-                            identity[ll][i][j]=-1;
-                        }
-                        if(ln.charAt(j)=='O'){
-                            loc.add(new Point(ll,i,j));
-                            identity[ll][i][j]=O++;
-                        }
-                        if(ln.charAt(j)=='E'){
-                            loc.add(new Point(ll,i,j));
-                        }
-                        m[ll][i][j]= ln.charAt(j);
+           int level = f.nextInt(), row = f.nextInt(), col = f.nextInt(), o = f.nextInt(), s = f.nextInt();
+           int sl = -1, sr = -1, sc = -1;
+           int cd = 0;
+           f.nextLine();
+           m = new char[level][row][col];
+           shadow = new int[1 << o][level][row][col];
+           List<int[]> exit = new ArrayList<>();
+            for (int i = 0; i < shadow.length; i++) {
+                for (int j = 0; j < shadow[i].length; j++) {
+                    for (int k = 0; k < shadow[i][j].length; k++) {
+                        Arrays.fill(shadow[i][j][k],Integer.MAX_VALUE);
                     }
                 }
             }
-            for (int layer = 0; layer < l; layer++) {
-                for (int row = 0; row < r; row++) {
-                    for (int col = 0; col < c; col++) {
-                        // checking if current point is the starting position or a cd we must pick up
-                        if("OS".contains(m[layer][row][col]+"")){
-                            for (int i = 0; i < l; i++) {
-                                for (int j = 0; j < r; j++) {
-                                    Arrays.fill(shadow[i][j],Integer.MAX_VALUE);
-                                }
-                            }
-                            // finding minimum step from current point to start,end,other cds
-                            find(layer,row,col,0);
-                            List<Point> edges = new ArrayList<>();
-                            for(Point p : loc){
-                                // checking if point p is not our current location and check if we can actually reach point p -> by checking != Integer.MAX_VALUE
-                                if (!p.equals(layer, row, col) && shadow[p.l][p.x][p.y]!=Integer.MAX_VALUE) {
-                                    edges.add(new Point(p.l,p.x,p.y,shadow[p.l][p.x][p.y],identity[p.l][p.x][p.y]));
-                                }
-                            }
-                            hm.put(identity[layer][row][col],edges);
+            for (int i = 0; i < m.length; i++) {
+                for (int j = 0; j < m[i].length; j++) {
+                    m[i][j] = f.nextLine().trim().toCharArray();
+                    for (int k = 0; k < m[i][j].length; k++) {
+                        if(m[i][j][k]=='S'){
+                            sl = i;
+                            sr = j;
+                            sc = k;
+                        }
+                        else if(m[i][j][k]=='E'){
+                            exit.add(new int[]{i,j,k});
+                        }
+                        else if(m[i][j][k]=='O'){
+                            m[i][j][k] = (char)(cd + '0');
+                            cd++;
                         }
                     }
                 }
             }
-            HashSet<Integer> visited = new HashSet<>();
-            recur(identity[sl][sr][sc],sl,sr,sc,0,o,visited);
-            // if we can reach E and minimum step is less than or equal to required time then we pass
-            out.println(solved && min<=t? "# of steps achieved: " + min :"None shall pass.");
+//            for(char[][] l : m){
+//                for(char[] line : l){
+//                    out.println(line);
+//                }
+//                out.println();
+//            }
+
+            recur(sl,sr,sc,0,0);
+//            for (int i = 0; i < shadow.length; i++) {
+//                for (int j = 0; j < shadow[i].length; j++) {
+//                    for (int k = 0; k < shadow[i][j].length; k++) {
+//                        out.println(Arrays.toString(shadow[i][j][k]));
+//                    }
+//                    out.println();
+//                }
+//                out.println("-".repeat(20));
+//            }
+            int min = Integer.MAX_VALUE;
+            while (!exit.isEmpty()) {
+                int[] ar = exit.remove(exit.size()-1);
+                int l = ar[0], r = ar[1], c = ar[2];
+                min = Math.min(shadow[shadow.length-1][l][r][c], min);
+            }
+            out.println(min <= s ? "# of steps achieved: " + min : "None shall pass.");
         }
         f.close();
     }
-    class Point{
-        int l,x,y,dis, id;
-        public Point(int ll, int r, int c){
-            l = ll;
-            x = r;
-            y = c;
-        }
-        public Point(int ll,int r,int c, int distance,int ids){
-            l = ll;
-            x = r;
-            y = c;
-            dis = distance;
-            id = ids;
-        }
-        public boolean equals(int ll,int r,int c){
-            return l == ll && x == r && y == c;
-        }
-        public String toString(){
-            return id + " - (" + l + "," + x + "," + y + ") -> " + dis;
-        }
-    }
-    public void find(int l, int r, int c, int step){
-        if(l>=0&&l<m.length&&r>=0&&r<m[l].length&&c>=0&&c<m[l][r].length&&m[l][r][c]!='#'&&step<shadow[l][r][c]){
-            char save = m[l][r][c];
-            m[l][r][c] = '#';
-            shadow[l][r][c] = step;
-            find(l-1,r,c,step+1);
-            find(l+1,r,c,step+1);
-            find(l,r-1,c,step+1);
-            find(l,r+1,c,step+1);
-            find(l,r,c-1,step+1);
-            find(l,r,c+1,step+1);
-            m[l][r][c] = save;
-        }
-    }
-    public void recur(int cur, int l, int r, int c, int step,int jw,HashSet<Integer> visited){
-        if(m[l][r][c]=='E'){
-            solved = true; // solved checking if we can reach E
-            if(jw==0){
-                min = Math.min(min,step); // min is storing the minimum step to get to E
+    public void recur(int l, int r, int c, int step,int cd){
+        if(l>=0&&r>=0&&c>=0&&l<m.length&&r<m[l].length&&c<m[l][r].length&&m[l][r][c]!='#'&&step<shadow[cd][l][r][c]){
+            shadow[cd][l][r][c] = step;
+            if (Character.isDigit(m[l][r][c])) {
+                cd |= 1 << (m[l][r][c]-'0');
             }
-            return;
+            shadow[cd][l][r][c] = step;
+            recur(l-1,r,c,step+1,cd);
+            recur(l+1,r,c,step+1,cd);
+            recur(l,r-1,c,step+1,cd);
+            recur(l,r+1,c,step+1,cd);
+            recur(l,r,c-1,step+1,cd);
+            recur(l,r,c+1,step+1,cd);
         }
-        visited.add(cur);
-        for(Point p : hm.get(cur)){
-            if (!visited.contains(p.id)) {
-                if(m[l][r][c]=='O'){
-                    recur(p.id,p.l,p.x,p.y,step+p.dis,jw-1,visited);
-                }else{
-                    recur(p.id,p.l,p.x,p.y,step+p.dis,jw,visited);
-                }
-            }
-        }
-        visited.remove(cur);
     }
 }

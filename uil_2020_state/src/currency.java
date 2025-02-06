@@ -21,62 +21,54 @@ public class currency {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        while (times-- > 0) {
+		for (int asdf = 0; asdf < times; asdf++) {
 			int n = f.nextInt();
 			f.nextLine();
-			double[][] conversion = new double[n][n];
-			boolean[][] v = new boolean[n][n];
-			List<String> cur = new ArrayList<>();
+			List<String> al = new ArrayList<>();
 			for (int i = 0; i < n; i++) {
-				cur.add(f.nextLine());
+				al.add(f.nextLine());
 			}
-			int N = f.nextInt();
+			int p = f.nextInt();
 			f.nextLine();
-			for (int i = 0; i < N; i++) {
-				String one = f.next(), two = f.next();
-				double val = f.nextDouble();
-				f.nextLine();
-				int a = cur.indexOf(one);
-				int b = cur.indexOf(two);
-				conversion[a][b] = val;
-				conversion[b][a] = 1/val;
-				v[a][b] = v[b][a] = true;
+			double[][] conversion = new double[n][n];
+			boolean[][] con = new boolean[n][n];
+			for (int i = 0; i < p; i++) {
+				int a = al.indexOf(f.next());
+				int b = al.indexOf(f.next());
+				double c = f.nextDouble();
+				con[a][b] = con[b][a] = true;
+				if(c!=0){
+					conversion[a][b] = c;
+					conversion[b][a] = 1/c;
+				}
 			}
+			int a = al.indexOf(f.next());
+			int b = al.indexOf(f.next());
+			PriorityQueue<double[]> pq =new PriorityQueue<>((one,two) -> Double.compare(one[1],two[1]));
+			pq.add(new double[]{a,1});
 			boolean found = false;
-			int s = cur.indexOf(f.next()), e = cur.indexOf(f.next());
-			if(f.hasNext()){
-				f.nextLine();
-			}
-			Queue<Double> q = new LinkedList<>();
-			boolean[] visit = new boolean[n];
-			q.offer((double)s);
-			q.offer(1.0);
-			if(e<0 || e>=n || s < 0 || s>= n){
-				out.println("NO CONVERSION RATE AVAILABLE");
-				continue;
-			}
-			while(!q.isEmpty()){
-				double point = q.remove();
-				double value = q.remove();
-				int current= (int)point;
-				if(v[current][e]){
+			boolean[] visited =new boolean[n];
+			while(!pq.isEmpty()){
+				double[] ar = pq.remove();
+				int cur = (int)ar[0];
+				double c = ar[1];
+				if(cur==b){
+					out.printf("%.2f\n", c);
 					found = true;
-					out.printf("%.2f\n",value * conversion[current][e]);
 					break;
 				}
-				if(visit[current]) continue;
-				visit[current] = true;
+				if(visited[cur]) continue;
+				visited[cur] = true;
 				for (int i = 0; i < n; i++) {
-					if(v[current][i]){
-						q.offer((double)i);
-						q.offer(value * conversion[current][i]);
+					if(con[cur][i] && cur!=i){
+						pq.offer(new double[]{i,c * conversion[cur][i]});
 					}
 				}
 			}
 			if(!found){
 				out.println("NO CONVERSION RATE AVAILABLE");
 			}
-        }
+		}
         f.close();
     }
 }

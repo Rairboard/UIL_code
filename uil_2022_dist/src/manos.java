@@ -11,8 +11,7 @@ public class manos {
         // Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         while (times-- > 0) {
-            int in = f.nextInt() ^ f.nextInt();
-            System.out.println(in != 0 ? "P1":"P2");
+            System.out.println(f.nextInt() == f.nextInt() ? "P2":"P1");
         }
     }
 

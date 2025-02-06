@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67b4f6bc-e10a-4293-bec1-5b73bce4f3ee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2022/src/Tang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2022/src/Tang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ace.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bart.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bart.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ben.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ben.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bethany.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bethany.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conrad.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conrad.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dilbert.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dilbert.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jason.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jason.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lina.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lina.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/max.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/max.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nicholas.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nicholas.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rufus.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rufus.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ben.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bethany.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conrad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dilbert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jason.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/max.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nicholas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rufus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/victoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui_2024_state.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/victoria.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/victoria.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2014_reg/src/volcano.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2014_reg/src/volcano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2014_state/src/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2014_state/src/Switch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2020_state/doors.out" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/doors.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/doors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/Doors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/star.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/star.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2023_state/src/Vijay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_state/src/Vijay.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="uil.dat" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2r12SGdU3KVUvFc06TmIoJMH78P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bart.executor": "Run",
+    "Application.bart.executor": "Run",
+    "Application.ben.executor": "Run",
+    "Application.bethany.executor": "Run",
+    "Application.conrad.executor": "Run",
+    "Application.dilbert.executor": "Run",
+    "Application.jason.executor": "Run",
+    "Application.lina.executor": "Run",
+    "Application.max.executor": "Run",
+    "Application.nicholas.executor": "Run",
+    "Application.rufus.executor": "Run",
+    "Application.victoria.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Intellij/uil/uil_2024_state"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij\uil\ui_2024_state" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67b4f6bc-e10a-4293-bec1-5b73bce4f3ee" name="Changes" comment="" />
+      <created>1735712272949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735712272949</updated>
+    </task>
+    <servers />
+  </component>
+</project>

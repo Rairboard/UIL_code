@@ -11,68 +11,60 @@ public class Anday {
 //        Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        while (times-- > 0) {
-            int v = f.nextInt();
-            Point[] loc = new Point[v];
-            PriorityQueue<Edge> pq = new PriorityQueue<>();
-            for (int i = 0; i < v; i++) {
-                loc[i] = new Point(f.nextInt(),f.nextInt(),i);
+        for (int asdf = 0; asdf < times; asdf++) {
+            int n  =f.nextInt();
+            int[][] point =new int[n][2];
+            for (int i = 0; i < n; i++) {
+                point[i] = new int[]{f.nextInt(),f.nextInt()};
             }
-            for (int i = 0; i < loc.length; i++) {
-                for (int j = i + 1; j < loc.length; j++) {
-                    pq.offer(new Edge(loc[i],loc[j],calculateDistance(loc[i],loc[j])));
+            PriorityQueue<Road> pq =new PriorityQueue<>();
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    pq.add(new Road(i,j,distance(point[i],point[j])));
                 }
             }
-            int[] parent = new int[v];
-            for (int i = 0; i < v; i++) {
+            int[] parent = new int[n];
+            for (int i = 0; i < n; i++) {
                 parent[i] = i;
             }
-            int total = 0;
-            v--;
-            while(v>0){
-                Edge e = pq.poll();
-                int head1 = find(parent,e.a.index);
-                int head2 = find(parent,e.b.index);
-                if(head1!=head2){
-                    v--;
-                    total+=e.weight;
-                    union(parent,head1,head2);
+            n--;
+            long total = 0;
+            while(n > 0){
+                Road r = pq.remove();
+                int head1 = find(parent, r.a);
+                int head2 = find(parent, r.b);
+                if(head1 != head2){
+                    union(parent, head1, head2);
+                    total += r.distance;
+                    n--;
                 }
             }
             System.out.println(total);
         }
         f.close();
     }
-    public int find(int[] parent,int i){
+    public void union(int[] parent, int head1, int head2){
+        parent[head1] = parent[head2];
+    }
+    public int find(int[] parent, int i){
         if(parent[i] == i){
             return i;
         }
-        return parent[i] = find(parent,parent[i]);
+        return parent[i] = find(parent, parent[i]);
     }
-    public void union(int[] parent,int a,int b){
-        parent[a] = b;
+    public long distance(int[] a, int[] b){
+        return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]);
     }
-    public int calculateDistance(Point a,Point b){
-        return Math.abs(b.x - a.x) + Math.abs(b.y - a.y);
-    }
-    class Point{
-        int x,y,index;
-        public Point(int x,int y,int index){
-            this.x = x;
-            this.y = y;
-            this.index = index;
+    class Road implements Comparable<Road>{
+        int a, b;
+        long distance;
+        public Road(int i, int j, long d){
+            a = i;
+            b = j;
+            distance = d;
         }
-    }
-    class Edge implements Comparable<Edge>{
-        Point a,b;
-        int weight;
-        public Edge(Point a,Point b,int weight){
-            this.a = a;
-            this.b = b;
-            this.weight = weight;
-        }
-        public int compareTo(Edge o){
-            return this.weight - o.weight;
+        public int compareTo(Road o){
+            return Long.compare(distance,o.distance);
         }
     }
 }

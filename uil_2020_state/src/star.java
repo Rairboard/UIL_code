@@ -19,68 +19,45 @@ public class star {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("star").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-		int p = f.nextInt(), con = f.nextInt(), N = f.nextInt();
+		int p = f.nextInt(), n = f.nextInt(), cases = f.nextInt();
 		f.nextLine();
-        List<String> planet = new ArrayList<>();
-		Point[] cor = new Point[p];
-		boolean[][] v = new boolean[p][p];
+		List<String> al = new ArrayList<>();
+		double[][] m = new double[p][3];
 		for (int i = 0; i < p; i++) {
-			planet.add(f.next());
-			cor[i] = new Point(f.nextDouble(),f.nextDouble(),f.nextDouble());
-			f.nextLine();
+			al.add(f.next());
+			m[i] = new double[]{f.nextDouble(), f.nextDouble(), f.nextDouble()};
 		}
-		for (int i = 0; i < con; i++) {
-			int a = planet.indexOf(f.next()), b = planet.indexOf(f.next());
-			f.nextLine();
-			v[a][b] = v[b][a] = true;
+		boolean[][] con = new boolean[p][p];
+		for (int i = 0; i < n; i++) {
+			int a = al.indexOf(f.next());
+			int b = al.indexOf(f.next());
+			con[a][b] = con[b][a] = true;
 		}
-		for (int i = 0; i < N; i++) {
-			String a = f.next(), b = f.next();
-			int s = planet.indexOf(a);
-			int e = planet.indexOf(b);
-			if(s==e){
-				out.printf("%s -> %s : %,.3f\n",a,b,0.0);
-			}
-			else{
-				Queue<Double> q = new LinkedList<>();
-				q.add((double)s);
-				q.add(0.0);
-				double[] shadow = new double[p];
-				Arrays.fill(shadow,Double.MAX_VALUE);
-				while(!q.isEmpty()){
-					double point = q.remove();
-					double dis = q.remove();
-					int cur = (int)point;
-					if(dis>=shadow[cur]){
-						continue;
-					}
-					shadow[cur] = dis;
-					for (int j = 0; j < p; j++) {
-						if(v[cur][j]){
-							q.offer((double)j);
-							q.offer(dis + cor[cur].getDistance(cor[j]));
-						}
+		for (int i = 0; i < cases; i++) {
+			int a = al.indexOf(f.next());
+			int b = al.indexOf(f.next());
+			double[] shadow =new double[p];
+			Arrays.fill(shadow,Double.MAX_VALUE);
+			PriorityQueue<double[]> pq =new PriorityQueue<>((one,two) -> Double.compare(one[1],two[1]));
+			pq.add(new double[]{a,0});
+			while(!pq.isEmpty()){
+				double[]ar = pq.remove();
+				int cur = (int)ar[0];
+				double dis = ar[1];
+				if(dis>=shadow[cur]) continue;
+				shadow[cur] = dis;
+				for (int j = 0; j < p; j++) {
+					if(cur!=j&&con[cur][j]){
+						pq.offer(new double[]{j, calculate(cur,j,m) + dis});
 					}
 				}
-				if(shadow[e] == Double.MAX_VALUE){
-					out.println("These are not the planets you're looking for.");
-				}
-				else{
-					out.printf("%s -> %s : %,.3f\n",a,b,shadow[e]);
-				}
 			}
+			if(shadow[b] == Double.MAX_VALUE) out.println("These are not the planets you're looking for.");
+			else out.printf("%s -> %s : %,.3f\n", al.get(a), al.get(b), shadow[b]);
 		}
         f.close();
     }
-	class Point{
-		double x,y,z;
-		public Point(double a, double b, double c){
-			x = a;
-			y = b;
-			z = c;
-		}
-		public double getDistance(Point o){
-			return Math.sqrt(Math.pow(x-o.x,2) + Math.pow(y-o.y,2) + Math.pow(z-o.z,2));
-		}
+	public double calculate(int a, int b, double[][] m){
+		return Math.sqrt(Math.pow(m[a][0] - m[b][0],2) + Math.pow(m[a][1] - m[b][1],2) + Math.pow(m[a][2] - m[b][2],2));
 	}
 }

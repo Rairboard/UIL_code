@@ -14,9 +14,7 @@ import static java.lang.Math.*;
 public class Tang {
 	char[][] m;
 	int[][] shadow;
-	boolean solved;
-	int min;
-	List<Point> portal;
+	List<int[]> portal;
     public static void main(String[] args) throws Exception {
         new Tang().run();
     }
@@ -24,75 +22,61 @@ public class Tang {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("Tang").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-        int times = f.nextInt();
-        f.nextLine();
-        while (times-- > 0) {
-			int r = f.nextInt(), c = f.nextInt(), sr = -1, sc = -1,er = -1, ec = -1;
+		int times = f.nextInt();
+		f.nextLine();
+		for (int asdf = 0; asdf < times; asdf++) {
+			int row = f.nextInt(),col = f.nextInt();
 			f.nextLine();
-			m = new char[r][c];
-			shadow = new int[r][c];
+			int sr = -1, sc = -1, er = -1, ec = -1;
 			portal = new ArrayList<>();
-			solved = false;
-			min = Integer.MAX_VALUE;
-
-			for (int i = 0; i < r; i++) {
-				String s = f.nextLine();
-				m[i] = s.toCharArray();
+			m = new char[row][col];
+			shadow = new int[row][col];
+			for (int i = 0; i < row; i++) {
+				m[i] = f.nextLine().trim().toCharArray();
 				Arrays.fill(shadow[i],Integer.MAX_VALUE);
-				if (s.contains("T")) {
-					sr = i;
-					sc = s.indexOf("T");
-				}
-				if (s.contains("P")) {
-					er = i;
-					ec = s.indexOf("P");
-				}
-				for (int j = 0; j < m[i].length; j++) {
-					if(m[i][j] == 'O'){
-						portal.add(new Point(i,j));
+				for (int j = 0; j < col; j++) {
+					if(m[i][j]=='T'){
+						sr = i;
+						sc = j;
+					}
+					else if(m[i][j]=='P'){
+						er = i;
+						ec = j;
+					}
+					else if(m[i][j]=='O'){
+						portal.add(new int[]{i,j});
 					}
 				}
 			}
-
 			recur(sr,sc,0);
-			if(solved && min <= 30){
-				out.println("It took Tang " + min + " minute(s) to get his PearBook to the nearest Pear Inc. Store");
-			}else {
+			if((er == -1 && ec == -1) || shadow[er][ec]==Integer.MAX_VALUE || shadow[er][ec]>30){
 				out.println("Tang isn't great at thinking with portals.");
 			}
-        }
+			else{
+				out.println("It took Tang " + shadow[er][ec] + " minute(s) to get to the nearest Pear Inc. Store.");
+			}
+//			for (int i = 0; i < row; i++) {
+//				out.println(Arrays.toString(shadow[i]));
+//			}
+		}
         f.close();
     }
 	public void recur(int r, int c, int step){
-		if(r>=0&&c>=0&&r<m.length&&c<m[r].length&&m[r][c]!='#'&&m[r][c]!='+'&&step<shadow[r][c]){
-			char save = m[r][c];
+		if(r>=0&&c>=0&&r<m.length&&c<m[r].length&&m[r][c]!='#'&&step<shadow[r][c]){
 			shadow[r][c] = step;
-			m[r][c] = '+';
-			if(save=='P'){
-				m[r][c] = save;
-				solved = true;
-				min = step;
-				return;
-			}
-			if(save=='O'){
-				for(Point p : portal){
-					if (!(p.r == r && p.c == c)) {
-						recur(p.r,p.c,step+1);
-					}
+			if(m[r][c]=='P') return;
+			if(m[r][c]=='O'){
+				for (int i = 0; i < portal.size(); i++) {
+					int nr = portal.get(i)[0];
+					int nc = portal.get(i)[1];
+					if(nr==r && nc == c) continue;
+					recur(nr,nc,step+1);
 				}
 			}
 			recur(r-1,c,step+1);
 			recur(r+1,c,step+1);
 			recur(r,c-1,step+1);
 			recur(r,c+1,step+1);
-			m[r][c] = save;
-		}
-	}
-	class Point{
-		int r,c;
-		public Point(int r, int c){
-			this.r = r;
-			this.c = c;
 		}
 	}
 }

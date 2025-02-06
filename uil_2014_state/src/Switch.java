@@ -19,53 +19,59 @@ public class Switch {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("Switch").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-        int times = f.nextInt();
+        int times =f.nextInt();
         f.nextLine();
-        for (int asdf = 1; asdf <= times; asdf++) {
-            int n = f.nextInt() % 31, k = f.nextInt();
+        for (int asdf = 0; asdf < times; asdf++) {
+            int n = f.nextInt(), k = f.nextInt();
             f.nextLine();
-            int[] switches = new int[k];
+            long target = (1L << n) -1;
+            long[] switches = new long[k];
             for (int i = 0; i < k; i++) {
                 String ln = f.nextLine().trim();
-                for (int j = 0; j < ln.length(); j++) {
-                    if(ln.charAt(j)=='Y') switches[i] |= (1<<j);
+                for(int j = 0;j < ln.length();j++){
+                    if(ln.charAt(ln.length()-1-j) == 'Y') switches[i] |= (1L << j);
                 }
             }
-            int target = (1<<n)-1;
+            boolean found = false;
+            Map<Long,Integer> shadow = new HashMap<>();
             PriorityQueue<Node> pq = new PriorityQueue<>();
-            HashSet<Integer> visited = new HashSet<>();
             pq.offer(new Node(0,0));
             while(!pq.isEmpty()){
-                Node cur = pq.remove();
-                int bulb = cur.bulb;
-                int flip = cur.flip;
-                if(visited.contains(bulb)) continue;
-                visited.add(bulb);
-                if(bulb == target){
-                    if(flip>10) out.println("TOO HARD!");
-                    else{
-                        out.println(flip);
-                    }
+                Node N = pq.remove();
+                long cur = N.n;
+                int step = N.step;
+                if(cur==target){
+                    found = true;
+                    out.println(step);
                     break;
                 }
-                if(flip>10) continue;
-                for(int i = 0;i < switches.length;i++){
-                    int newBulb = bulb ^ switches[i];
-                    pq.offer(new Node(newBulb, flip+1));
+                if(step > 10){
+                    found = true;
+                    out.println("TOO HARD!");
+                    break;
+                }
+                if (shadow.containsKey(cur)){
+                    if(step >= shadow.get(cur)) continue;
+                }
+                shadow.put(cur,step);
+                for (int i = 0; i < k; i++) {
+                    long b = cur ^ switches[i];
+                    pq.offer(new Node(b, step+1));
                 }
             }
+            if(!found) out.println("TOO HARD!");
         }
         f.close();
     }
-    class Node implements Comparable<Node> {
-        int bulb;
-        int flip;
-        public Node(int b, int f){
-            bulb = b;
-            flip = f;
+    class Node implements Comparable<Node>{
+        long n;
+        int step;
+        public Node(long n, int s){
+            this.n = n;
+            step = s;
         }
         public int compareTo(Node o){
-            return flip - o.flip;
+            return step - o.step;
         }
     }
 }
