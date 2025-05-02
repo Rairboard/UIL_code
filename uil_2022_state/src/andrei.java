@@ -13,7 +13,7 @@ import static java.lang.Math.*;
 
 public class andrei {
     public static void main(String[] args) throws Exception {
-        new andrei().run();
+//        new andrei().run();
     }
 
     public void run() throws Exception {

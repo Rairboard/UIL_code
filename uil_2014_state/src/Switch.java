@@ -21,57 +21,53 @@ public class Switch {
         //Scanner f = new Scanner(System.in);
         int times =f.nextInt();
         f.nextLine();
-        for (int asdf = 0; asdf < times; asdf++) {
+        for(int asdf = 1;asdf<=times;asdf++){
             int n = f.nextInt(), k = f.nextInt();
             f.nextLine();
-            long target = (1L << n) -1;
-            long[] switches = new long[k];
+            BitSet[] toggle = new BitSet[k];
             for (int i = 0; i < k; i++) {
-                String ln = f.nextLine().trim();
-                for(int j = 0;j < ln.length();j++){
-                    if(ln.charAt(ln.length()-1-j) == 'Y') switches[i] |= (1L << j);
+                toggle[i] = new BitSet(n);
+                String flip = f.nextLine();
+                for(int j = n-1;j>=0;j--){
+                    if(flip.charAt(j) == 'Y'){
+                        toggle[i].set(n-1-j);
+                    }
                 }
             }
-            boolean found = false;
-            Map<Long,Integer> shadow = new HashMap<>();
-            PriorityQueue<Node> pq = new PriorityQueue<>();
-            pq.offer(new Node(0,0));
-            while(!pq.isEmpty()){
-                Node N = pq.remove();
-                long cur = N.n;
-                int step = N.step;
-                if(cur==target){
-                    found = true;
-                    out.println(step);
+            int move = -1;
+            BitSet s = new BitSet(n), e = new BitSet(n);
+            e.set(0,n);
+            HashSet<BitSet> visited = new HashSet<>();
+            visited.add(s);
+            Queue<state> q = new LinkedList<>();
+            q.offer(new state(s, 0));
+            while(!q.isEmpty()){
+                state cur = q.remove();
+                if(cur.step > 10) continue;
+                if (cur.curSwitch.equals(e)) {
+                    move = cur.step;
                     break;
                 }
-                if(step > 10){
-                    found = true;
-                    out.println("TOO HARD!");
-                    break;
-                }
-                if (shadow.containsKey(cur)){
-                    if(step >= shadow.get(cur)) continue;
-                }
-                shadow.put(cur,step);
                 for (int i = 0; i < k; i++) {
-                    long b = cur ^ switches[i];
-                    pq.offer(new Node(b, step+1));
+                    BitSet newSwitch = (BitSet)cur.curSwitch.clone();
+                    newSwitch.xor(toggle[i]);
+                    if (!visited.contains(newSwitch)) {
+                        visited.add(newSwitch);
+                        q.offer(new state(newSwitch, cur.step+1));
+                    }
                 }
             }
-            if(!found) out.println("TOO HARD!");
+            if(move==-1) out.println("TOO HARD!");
+            else out.println(move);
         }
         f.close();
     }
-    class Node implements Comparable<Node>{
-        long n;
+    class state{
+        BitSet curSwitch;
         int step;
-        public Node(long n, int s){
-            this.n = n;
+        public state(BitSet b, int s){
+            curSwitch = b;
             step = s;
-        }
-        public int compareTo(Node o){
-            return step - o.step;
         }
     }
 }

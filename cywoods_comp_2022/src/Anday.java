@@ -12,59 +12,56 @@ public class Anday {
         int times = f.nextInt();
         f.nextLine();
         for (int asdf = 0; asdf < times; asdf++) {
-            int n  =f.nextInt();
-            int[][] point =new int[n][2];
+            int n = f.nextInt();
+            f.nextLine();
+            int[][] point = new int[n][2];
             for (int i = 0; i < n; i++) {
                 point[i] = new int[]{f.nextInt(),f.nextInt()};
             }
-            PriorityQueue<Road> pq =new PriorityQueue<>();
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    pq.add(new Road(i,j,distance(point[i],point[j])));
-                }
-            }
             int[] parent = new int[n];
+            Arrays.fill(parent, -1);
+            PriorityQueue<Road> pq = new PriorityQueue<>();
             for (int i = 0; i < n; i++) {
-                parent[i] = i;
+                for (int j = i+1; j < n; j++) {
+                    long distance = Math.abs(point[i][0] - point[j][0]) + Math.abs(point[i][1] - point[j][1]);
+                    pq.offer(new Road(i,j,distance));
+                }
             }
             n--;
             long total = 0;
-            while(n > 0){
+            while(n>0){
                 Road r = pq.remove();
-                int head1 = find(parent, r.a);
-                int head2 = find(parent, r.b);
-                if(head1 != head2){
-                    union(parent, head1, head2);
-                    total += r.distance;
+                int ahead = find(parent, r.a);
+                int bhead = find(parent, r.b);
+                if(ahead!=bhead){
                     n--;
+                    total+=r.distance;
+                    union(parent, ahead, bhead);
                 }
             }
             System.out.println(total);
         }
         f.close();
     }
-    public void union(int[] parent, int head1, int head2){
-        parent[head1] = parent[head2];
-    }
     public int find(int[] parent, int i){
-        if(parent[i] == i){
+        if(parent[i] == -1){
             return i;
         }
-        return parent[i] = find(parent, parent[i]);
+        return find(parent, parent[i]);
     }
-    public long distance(int[] a, int[] b){
-        return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]);
+    public void union(int[] parent, int ahead, int bhead){
+        parent[ahead] = bhead;
     }
-    class Road implements Comparable<Road>{
+    class Road implements Comparable<Road> {
         int a, b;
         long distance;
-        public Road(int i, int j, long d){
-            a = i;
-            b = j;
-            distance = d;
+        public Road(int a, int b, long distance){
+            this.a = a;
+            this.b = b;
+            this.distance = distance;
         }
         public int compareTo(Road o){
-            return Long.compare(distance,o.distance);
+            return Double.compare(distance, o.distance);
         }
     }
 }

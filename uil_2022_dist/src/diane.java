@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.*;
 import java.io.*;
 
@@ -11,90 +12,109 @@ public class diane {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
 		f.nextLine();
-        while (times-- > 0) {
-			String l = f.nextLine();
-			String[] e = l.split("\\s+");
-			if(l.contains("/")) {
-				if(e.length == 5) {
-					String[] fraction = l.split("\\s*and\\s*");
-					String[] one = fraction[0].split("\\s+|/"), two = fraction[1].split("\\s+|/");
-					long w1 = Long.parseLong(one[0]), n1 = Long.parseLong(one[1]), d1 = Long.parseLong(one[2]);
-					long w2 = Long.parseLong(two[0]), n2 = Long.parseLong(two[1]), d2 = Long.parseLong(two[2]);
-					F f1 = new F(w1 * d1 + n1, d1);
-					F f2 = new F(w2 * d2 + n2, d2);
-					F res = f1.add(f2);
-					System.out.println(res.toMixedFraction());
-				} else {
-					String[] fraction = l.split("\\s*and\\s*");
-					String[] one = fraction[0].split("/"), two = fraction[1].split("/");
-					F f1 = new F(Long.parseLong(one[0]), Long.parseLong(one[1]));
-					F f2 = new F(Long.parseLong(two[0]), Long.parseLong(two[1]));
-					F res = f1.add(f2);
-					System.out.println(res);
+		for (int asdf = 0; asdf < times; asdf++) {
+			String[] ln = f.nextLine().trim().split("\\s+and\\s+");
+			if (ln[0].contains("/") && ln[1].contains("/")) {
+				long[] f1 = erase(ln[0]);
+				long[] f2 = erase(ln[1]);
+				if(f1[2]==-1) f1[0]*=-1;
+				if(f2[2]==-1) f2[0]*=-1;
+				long numerator = f1[0] * f2[1] + f1[1] * f2[0];
+				long denominator = f1[1] * f2[1];
+				long factor = gcf(numerator, denominator);
+				if(numerator < 0){
+					factor = gcf(Math.abs(numerator), denominator);
 				}
-			} else{
-				System.out.println(Long.parseLong(e[0]) + Long.parseLong(e[2]));
+				numerator/=factor;
+				denominator/=factor;
+				if(numerator==0) System.out.println(0);
+				else if(Math.abs(numerator)<=denominator){
+					System.out.println(numerator+"/"+denominator);
+				}
+				else{
+					long whole = Math.abs(numerator) / denominator;
+					long newNum = Math.abs(numerator) % denominator;
+					if(numerator<0) whole*=-1;
+					System.out.println(whole + " " + newNum + "/" + denominator);
+				}
+			} else if (ln[0].contains("/") && !ln[1].contains("/")) {
+				long[] fraction = erase(ln[0]);
+				long number = Long.parseLong(ln[1]);
+				if(fraction[2] == -1) fraction[0] *=-1;
+				long numerator = number * fraction[1] + fraction[0];
+				long denominator = fraction[1];
+				long factor = gcf(numerator, denominator);
+				if(numerator < 0){
+					factor = gcf(Math.abs(numerator), denominator);
+				}
+				numerator/=factor;
+				denominator/=factor;
+				if(numerator==0) System.out.println(0);
+				else if(Math.abs(numerator)<=denominator){
+					System.out.println(numerator+"/"+denominator);
+				}
+				else{
+					long whole = Math.abs(numerator) / denominator;
+					long newNum = Math.abs(numerator) % denominator;
+					if(numerator<0) whole*=-1;
+					System.out.println(whole + " " + newNum + "/" + denominator);
+				}
+			} else if (!ln[0].contains("/") && ln[1].contains("/")) {
+				long[] fraction = erase(ln[1]);
+				if(fraction[2]==-1) fraction[0] *= -1;
+				long number = Long.parseLong(ln[0]);
+				long numerator = number * fraction[1] + fraction[0];
+				long denominator = fraction[1];
+				long factor = gcf(numerator, denominator);
+				if(numerator < 0){
+					factor = gcf(Math.abs(numerator), denominator);
+				}
+				numerator/=factor;
+				denominator/=factor;
+				if(numerator==0) System.out.println(0);
+				else if(Math.abs(numerator)<=denominator){
+					System.out.println(numerator+"/"+denominator);
+				}
+				else{
+					long whole = Math.abs(numerator) / denominator;
+					long newNum = Math.abs(numerator) % denominator;
+					if(numerator<0) whole*=-1;
+					System.out.println(whole + " " + newNum + "/" + denominator);
+				}
+			}
+			else{
+				System.out.println(Long.parseLong(ln[0]) + Long.parseLong(ln[1]));
 			}
         }
         f.close();
     }
-	public long gcf(long a, long b){
-		if(b==0){
-			return a;
-		}
-		return gcf(b, a%b);
+	public long gcf(long a,long b){
+	    if(a==0){
+	        return b;
+	    }
+	    return gcf(b % a, a);
 	}
-	class F{
-		public long numerator;
-		public long denominator;
-		public F(long a, long b){
-			this.numerator = a;
-			this.denominator =b;
-			simplifyFraction();
+	public long[] erase(String part){
+		String[] ln = part.split("\\s+");
+		long[] fraction = new long[3];
+		if(ln.length==2){
+			String[] a = ln[1].split("/");
+			long whole = Long.parseLong(ln[0]);
+			long numerator = Long.parseLong(a[0]);
+			long denominator = Long.parseLong(a[1]);
+			fraction[0] = Math.abs(whole) * denominator + numerator;
+			fraction[1] = denominator;
+			if(whole<0) fraction[2] = -1;
 		}
-		public F add(F other) {
-			long lcm = Math.abs(denominator * other.denominator) / gcf(denominator, other.denominator);
-			long num1 = numerator * (lcm / denominator);
-			long num2 = other.numerator * (lcm / other.denominator);
-
-			long resultNum = num1 + num2;
-			long resultDenom = lcm;
-
-			return new F(resultNum, resultDenom);
+		else{
+			String[] a = ln[0].split("/");
+			fraction[0] = Long.parseLong(a[0]);
+			fraction[1] = Long.parseLong(a[1]);
+			if(fraction[0] < 0) {
+				fraction[0] *= -1;
+				fraction[2] = -1;
+			}
 		}
-		public String toString(){
-			if(denominator == 1){
-				return Long.toString(this.numerator);
-			}
-			return this.numerator + "/" + this.denominator;
-		}
-		public String toMixedFraction(){
-			long whole = this.numerator/this.denominator;
-			return whole + " " + (this.numerator%this.denominator) + "/" + this.denominator;
-		}
-		public void simplifyFraction() {
-			if (denominator == 0) {
-				throw new IllegalArgumentException("Denominator cannot be zero.");
-			}
-			if (numerator == 0) {
-				denominator = 1;
-				return;
-			}
-
-			int sign = 1;
-			if (numerator < 0) {
-				sign = -sign;
-				numerator = -numerator;
-			}
-			if (denominator < 0) {
-				sign = -sign;
-				denominator = -denominator;
-			}
-
-			long divisor = gcf(numerator, denominator);
-			numerator /= divisor;
-			denominator /= divisor;
-			numerator *= sign;
-		}
+		return fraction;
 	}
 }

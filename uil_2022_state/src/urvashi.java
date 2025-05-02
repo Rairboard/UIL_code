@@ -38,18 +38,15 @@ public class urvashi {
                 continue;
             }
             int n = al.size();
-            long[][]shadow = new long[k+1][n];
+            long[] shadow = new long[n];
             long[][] m = new long[n][n];
             for (int i = 0; i < con.size(); i++) {
                 int a = al.indexOf(con.get(i)[0]);
                 int b = al.indexOf(con.get(i)[1]);
                 long cost = Long.parseLong(con.get(i)[2]);
-                m[a][b] = cost;
-                m[b][a] = cost;
+                m[a][b] = m[b][a] = cost;
             }
-            for (int i = 0; i < shadow.length; i++) {
-                Arrays.fill(shadow[i],Long.MAX_VALUE);
-            }
+            Arrays.fill(shadow, Long.MAX_VALUE);
             PriorityQueue<Node> pq = new PriorityQueue<>();
             pq.offer(new Node(al.indexOf(s), 0,0));
             while(!pq.isEmpty()){
@@ -57,23 +54,23 @@ public class urvashi {
                 int cur = N.cur;
                 int spell = N.k;
                 long cost = N.cost;
-                if(cost >= shadow[spell][cur]) continue;
-                shadow[spell][cur] = cost;
+                if(cost >= shadow[cur]) continue;
+                shadow[cur] = cost;
                 for (int i = 0; i < m.length; i++) {
-                    if(m[cur][i]!=0){
-                        pq.offer(new Node(i, cost + m[cur][i], spell));
-                        if(spell+1 < shadow.length){
-                            pq.offer(new Node(i,cost + reverse(m[cur][i]), spell+1));
+                    if (m[cur][i] != 0) {
+                        long roadCost = m[cur][i];
+                        for (int j = 0; j < spell; j++) {
+                            roadCost = reverse(roadCost);
+                        }
+                        pq.offer(new Node(i, cost + roadCost, spell));
+                        if (spell + 1 <= k) {
+                            pq.offer(new Node(i, cost + reverse(roadCost), spell));
                         }
                     }
                 }
             }
 
-            long min = Long.MAX_VALUE;
-            for (int i = 0; i <= k; i++) {
-//                out.println(Arrays.toString(shadow[i]));
-                min = Math.min(min, shadow[i][al.indexOf(e)]);
-            }
+            long min = shadow[al.indexOf(e)];
             out.println("Case #" + asdf + ": " + (min == Long.MAX_VALUE? "IMPOSSIBLE": min));
         }
         f.close();

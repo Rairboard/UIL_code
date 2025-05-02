@@ -23,26 +23,11 @@ public class gcd {
         f.nextLine();
         for (int asdf = 1; asdf <= times; asdf++) {
             int n = f.nextInt();
-            f.nextLine();
-            int[] num = new int[n];
-            int min = Integer.MAX_VALUE;
-            for (int i = 0; i < n; i++) {
-                num[i] = f.nextInt();
-                min = Math.min(min, num[i]);
+            BigInteger gcd = f.nextBigInteger().gcd(f.nextBigInteger());
+            for (int i = 0; i < n - 2; i++) {
+                gcd = gcd.gcd(f.nextBigInteger());
             }
-            for(int i = min;i>0;i--){
-                boolean found = true;
-                for (int j = 0; j < n; j++) {
-                    if(num[j]%i!=0){
-                        found = false;
-                        break;
-                    }
-                }
-                if(found){
-                    out.println(i);
-                    break;
-                }
-            }
+            out.println(gcd);
         }
         f.close();
     }

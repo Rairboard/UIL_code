@@ -1,90 +1,54 @@
+import java.math.BigInteger;
 import java.util.*;
 import java.io.*;
 class haru {
-    static List<Point> spikeLocation;
     public static void main(String[] args) throws Exception{
         new haru().run();
     }
     public void run()throws Exception{
         // Scanner f =new Scanner(System.in);
         Scanner f= new Scanner(new File("haru.dat"));
-        int T = f.nextInt();
-        while(T-->0){
-            int instructions = f.nextInt();
-            spikeLocation = new ArrayList<>();
-            Point p1 = new Point(f.nextInt(),f.nextInt());String a = f.next();
-            Point p2 = new Point(f.nextInt(),f.nextInt());String b =f.next();
-            Point tmp1,tmp2;
-            spikeLocation.add(p1);spikeLocation.add(p2);
-            String res=null;
-            for(int i=0;i<instructions;i++){
-                tmp1 = new Point(p1.x,p1.y);
-                tmp2 = new Point(p2.x,p2.y);
-                p1 = movement(a.charAt(i),p1);
-                p2 = movement(b.charAt(i),p2);
-                if(p1.collide(tmp1,tmp2,p2)){
-                    res = "HEAD ON";
-                }
-                boolean one = inSpikeLocation(p1), two = inSpikeLocation(p2);
-                // System.out.println(one + " " + two);
-                if(res==null){
-                    if(one && two){
-                        res = "DOUBLE SPIKE";
-                    }
-                    else if(one && !two){
-                        res = "P2 WIN";
-                    }
-                    else if(!one && two){
-                        res = "P1 WIN";
-                    }
-                }
-                spikeLocation.add(new Point(p1.x,p1.y));
-                spikeLocation.add(new Point(p2.x,p2.y));
+        int times = f.nextInt();
+        f.nextLine();
+        for (int asdf = 0; asdf < times; asdf++) {
+            int n = f.nextInt();
+            HashSet<String> spike = new HashSet<>();
+            int x1 = f.nextInt(), y1 = f.nextInt();
+            String a = f.nextLine().trim();
+            int x2 = f.nextInt(), y2 = f.nextInt();
+            String b = f.nextLine().trim();
+            boolean headOn = false, p1spike = false, p2spike = false;
+            for (int i = 0; i < n; i++) {
+                int[] p1 = move(x1,y1,a.charAt(i));
+                int[] p2 = move(x2,y2,b.charAt(i));
+                if(p1[0]==p2[0] && p1[1] == p2[1]) headOn = true;
+                if(p1[0] == x2 && p1[1] == y2 && p2[0] == x1 && p2[1] == y1) headOn = true;
+                if(p1[0] < 0 || p1[0] > 100 || p1[1] < 0 || p1[1] > 100 || spike.contains(p1[0]+" " + p1[1])|| spike.contains(x1+" "+y1)) p1spike = true;
+                if(p2[0] < 0 || p2[0] > 100 || p2[1] < 0 || p2[1] > 100 || spike.contains(p2[0] +" "+p2[1])|| spike.contains(x2+" "+y2)) p2spike = true;
+                spike.add(x1+" "+y1);
+                spike.add(x2+" "+y2);
+                x1 = p1[0];
+                y1 = p1[1];
+                x2 = p2[0];
+                y2 = p2[1];
+                if(headOn||p1spike||p2spike) break;
             }
-           if(res==null){
-               res = "DRAW";
-           }
-           System.out.println(res);
+            if(headOn) System.out.println("HEAD ON");
+            else if(p1spike && p2spike) System.out.println("DOUBLE SPIKE");
+            else if(!p1spike&&!p2spike) System.out.println("DRAW");
+            else if(p1spike) System.out.println("P2 WIN");
+            else  System.out.println("P1 WIN");
         }
+        f.close();
     }
-    class Point{
-        public int x;
-        public int y;
-        public Point(int x,int y){
-            this.x = x;
-            this.y = y;
+    public int[] move(int x, int y, char move){
+        int[] pos = new int[]{x,y};
+        switch (move){
+            case 'R' -> pos[0]++;
+            case 'L' -> pos[0]--;
+            case 'U' -> pos[1]++;
+            case 'D' -> pos[1]--;
         }
-        public boolean collide(Point o1,Point o2, Point c2){
-            if(this.x==c2.x && this.y==c2.y){
-                return true;
-            }
-            if((o1.x==c2.x&&o1.y==c2.y) && (o2.x==this.x&&o2.y==this.y)){
-                return true;
-            }
-            return false;
-        }
-        public String toString(){
-            return "(" + this.x + "," + this.y + ")";
-        }
-    }
-    public Point movement(char c, Point p){
-        switch(c){
-            case 'U': p = new Point(p.x,p.y+1);break;
-            case 'D': p = new Point(p.x,p.y-1);break;
-            case 'L': p = new Point(p.x-1,p.y);break;
-            case 'R': p = new Point(p.x+1,p.y);break;
-        }
-        return p;
-    }
-    public boolean inSpikeLocation(Point p){
-        if((p.x < 0 || p.x > 100) || (p.y < 0 || p.y > 100)){
-            return true;
-        }
-        for(Point P : spikeLocation){
-            if(P.x == p.x && P.y == p.y){
-                return true;
-            }
-        }
-        return false;
+        return pos;
     }
 }

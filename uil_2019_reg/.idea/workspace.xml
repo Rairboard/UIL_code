@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="994973bf-9006-4a8d-9152-9cb62e1363f8" name="Changes" comment="" />
+    <list default="true" id="994973bf-9006-4a8d-9152-9cb62e1363f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/adrian.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/arusha.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/catherine.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/diane.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/facundo.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/haru.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/kristina.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/lavanya.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/manos.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/michaela.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/pankaj.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_dist/shirley.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/harmony.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/jared.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/svetlana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2023/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2023/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/arusha.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/arusha.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/catherine.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/catherine.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/diane.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/diane.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/facundo.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/facundo.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/haru.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/haru.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/kristina.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/kristina.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/lavanya.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/lavanya.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/manos.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/manos.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/michaela.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/michaela.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/pankaj.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/pankaj.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/shirley.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/shirley.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/src/diane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/src/diane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/src/haru.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/src/haru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/src/lavanya.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/src/lavanya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_dist/src/michaela.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_dist/src/michaela.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2023_dist/src/Vanessa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_dist/src/Vanessa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2023_dist/src/shreya.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_dist/src/shreya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/sofia.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/sofia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/tyler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/tyler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/vika.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/vika.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/src/paola.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/src/paola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/src/wesley.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/src/wesley.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +60,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2avuG2vxQ66GbwCSQGIwGc40XFW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,16 +79,19 @@
   "keyToString": {
     "Application.andy.executor": "Run",
     "Application.belle.executor": "Run",
+    "Application.callen.executor": "Run",
     "Application.deborah.executor": "Run",
     "Application.gregory.executor": "Run",
     "Application.jordan.executor": "Run",
     "Application.katya.executor": "Run",
     "Application.kavya.executor": "Run",
     "Application.lucie.executor": "Run",
+    "Application.mateusz.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Intellij/uil/uil_2019_invB"
+    "last_opened_file_path": "D:/Intellij/uil/uil_2019_reg"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -48,7 +99,7 @@
       <recent name="D:\Intellij\uil\uil_2019_reg" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.lucie">
+  <component name="RunManager">
     <configuration name="kavya" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kavya" />
       <module name="uil_2019_reg" />

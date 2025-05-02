@@ -21,28 +21,27 @@ public class shreya {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        for (int asdf = 1; asdf <= times; asdf++) {
+        for(int asdf = 1;asdf<= times;asdf++){
             int[] coin = Arrays.stream(f.nextLine().trim().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-            int w = f.nextInt();
-            if(f.hasNext())f.nextLine();
+            int target = f.nextInt();
             int n = coin.length;
-            boolean[][] dp = new boolean[n+1][w+1];
-            for (int i = 0; i < dp.length; i++) {
-                Arrays.fill(dp[i],false);
-            }
-            Arrays.sort(coin);
+            f.nextLine();
+            boolean[][] dp = new boolean[n+1][target+1];
             dp[0][0] = true;
+            out.println(Arrays.toString(dp[0]));
             for (int i = 1; i <= n; i++) {
-                for (int j = 0; j <= w; j++) {
-                    if(coin[i-1]<= j){
-                        dp[i][j] = dp[i-1][j] || dp[i-1][j-coin[i-1]];
+                for (int j = 0; j <= target; j++) {
+                    if(j==0)dp[i][j] = true;
+                    else if(coin[i-1]<=j){
+                        dp[i][j] |= dp[i-1][j-coin[i-1]];
                     }
                     else{
-                        dp[i][j] |= dp[i-1][j];
+                        dp[i][j] = dp[i-1][j];
                     }
                 }
+                out.println(Arrays.toString(dp[i]));
             }
-            out.println(dp[n][w] ? "Business as usual.":"Dine and Dash.");
+            out.println(dp[n][target]?"Business as usual.":"Dine and Dash.");
         }
         f.close();
     }

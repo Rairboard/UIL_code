@@ -21,25 +21,26 @@ public class vika {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        for (int asdf = 1; asdf <= times; asdf++) {
-            String a = f.next(), b = f.next();
-            int n = a.length(), m = b.length();
-            int[][] dp = new int[n+1][m+1];
-            for (int i = 0; i <= n; i++) {
-                for (int j = 0; j <= m; j++) {
-                    if(i==0||j==0){
-                        dp[i][j] = 0;
-                    }
-                    else if(a.charAt(i-1) == b.charAt(j-1)){
-                        dp[i][j] = dp[i-1][j-1] + 1;
-                    }
-                    else{
-                        dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1]);
-                    }
-                }
-            }
-            out.println(dp[n][m]);
-        }
+
+        String a = f.next(), b = f.next();
+        f.nextLine();
+        int n = 2, m = 3;
+//        int[][] dp = new int[n+1][m+1];
+//        for (int i = 0; i <= n; i++) {
+//            for (int j = 0; j <= m; j++) {
+//                if(i==0) dp[i][j] = j;
+//                else if(j==0) dp[i][j] = i;
+//                else if (a.charAt(i - 1) == b.charAt(j - 1)) {
+//                    dp[i][j] = dp[i-1][j-1];
+//                }
+//                else{
+//                    dp[i][j] = 1 + Math.min(dp[i-1][j-1], Math.min(dp[i][j-1],dp[i-1][j]));
+//                }
+//            }
+//        }
+        int[][] dp = new int[n+1][m+1];
+        dp[0][0] = 1;
+        
         f.close();
     }
 }

@@ -21,72 +21,28 @@ public class krithika {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("krithika").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-        String[] num = new String[10];
-        num[0] = "***" +
-                " _ " +
-                "| |" +
-                "|_|" +
-                "   " +
-                "***";
-        num[1] = "***" +
-                "   " +
-                "  |" +
-                "  |" +
-                "   " +
-                "***";
-        num[2] = "***" +
-                " _ " +
-                " _|" +
-                "|_ " +
-                "   " +
-                "***";
-        num[3] = "***" +
-                " _ " +
-                " _|" +
-                " _|" +
-                "   " +
-                "***";
-        num[4] = "***" +
-                 "   " +
-                 "|_|" +
-                 "  |" +
-                 "   " +
-                 "***";
-        num[5]  ="***" +
-                " _ " +
-                "|_ " +
-                " _|" +
-                "   " +
-                "***";
-        num[6] = "***" +
-                " _ " +
-                "|_ " +
-                "|_|" +
-                "   " +
-                "***";
-        num[7] = "***" +
-                " _ " +
-                "  |" +
-                "  |" +
-                "   " +
-                "***";
-        num[8] = "***" +
-                " _ " +
-                "|_|" +
-                "|_|" +
-                "   " +
-                "***";
-        num[9] = "***" +
-                " _ " +
-                "|_|" +
-                "  |" +
-                "   " +
-                "***";
         int times = f.nextInt();
         f.nextLine();
         for (int asdf = 1; asdf <= times; asdf++) {
             int n = f.nextInt();
-
+            int k = f.nextInt();
+            long[] ar = new long[n];
+            for (int i = 0; i < n; i++) {
+                ar[i] = f.nextLong();
+            }
+            long ans = 0;
+            for(long bit = 1L << 61; bit > 0;bit>>=1){
+                ans|= bit;
+                int count = 0;
+                for(long number : ar){
+                    if((ans & number) == ans){
+                        count++;
+                    }
+                }
+                if(count < k) ans^=bit;
+            }
+//            out.println(Arrays.toString(ar));
+            out.println("Case #" + asdf + ": " + ans);
         }
         f.close();
     }

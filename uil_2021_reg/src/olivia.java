@@ -23,20 +23,26 @@ public class olivia {
         int times = f.nextInt();
         f.nextLine();
         for (int asdf = 1; asdf <= times; asdf++) {
-            long r = f.nextLong(), c =f.nextLong(), k = f.nextLong();
-            long row =0,col=0;
-            for(long i = 1;i<=r;i++){
-                if(i * c >= k && k % i ==0 ){
-                    row = i;
-                    col = k / i;
-                    break;
+            long row = f.nextLong(), col = f.nextLong(), k = f.nextLong();
+            List<Long> factor = new ArrayList<>();
+            for(long i = 1;i<=Math.sqrt(k);i++){
+                if(k%i==0){
+                    if(!factor.contains(i)) factor.add(i);
+                    if(!factor.contains(k/i)) factor.add(k/i);
                 }
             }
-            long N = row * col;
-            if(col >= r){
-                N+=Math.abs(row-col) * row;
+            factor.removeIf(e -> e > col || k/e > row);
+            long total = 0;
+            Collections.sort(factor);
+//            out.println(factor);
+            for (int i = 0; i < factor.size(); i++) {
+                long r = k/factor.get(i);
+                total+= r * factor.get(i);
+                if(i>0){
+                    total-=r* factor.get(i-1);
+                }
             }
-            out.println("Case #" + asdf + ": " + N);
+            out.println("Case #" + asdf + ": " + total);
         }
         f.close();
     }

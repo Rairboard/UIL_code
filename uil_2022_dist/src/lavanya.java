@@ -12,29 +12,24 @@ public class lavanya {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         while (times-- > 0) {
-			long N = f.nextLong();
-            if (new BigInteger(Long.toString(N)).isProbablePrime(1)) {
-                System.out.println(N + " = " + N);
-            } else{
-                System.out.print(N + " = ");
-                String s = "";
-                while (N % 2 == 0) {
-                    s += 2 + " * ";
-                    N /= 2;
+            List<Long> al = new ArrayList<>();
+            long n = f.nextLong();
+            System.out.print(n + " = ");
+            while(n%2==0){
+                al.add((long)2);
+                n/=2;
+            }
+            for(long i = 3;i * i<=n;i+=2){
+                while(n%i==0){
+                    al.add(i);
+                    n/=i;
                 }
-                for (int i = 3; i <= Math.sqrt(N); i += 2) {
-                    while (N % i == 0) {
-                        s+= i + " * ";
-                        N /= i;
-                    }
-                }
-                if (N > 2){
-                    s += N;
-                }
-                else{
-                    s = s.substring(0,s.lastIndexOf("*")-1);
-                }
-                System.out.println(s);
+            }
+            if(n>1) al.add(n);
+            Collections.sort(al);
+            for (int i = 0; i < al.size(); i++) {
+                if(i<al.size()-1) System.out.print(al.get(i) + " * ");
+                else System.out.println(al.get(i));
             }
         }
         f.close();

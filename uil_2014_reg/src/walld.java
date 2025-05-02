@@ -12,8 +12,8 @@ import static java.lang.Double.*;
 import static java.lang.Math.*;
 
 public class walld {
-    int[][] shadow;
-    int[][] m;
+    long[][] shadow;
+    long[][] m;
     boolean found;
     int k;
     int[] vr = {-1,1,0,0};
@@ -32,13 +32,13 @@ public class walld {
             k = f.nextInt();
             f.nextLine();
             found = false;
-            m = new int[n][n];
-            shadow = new int[n][n];
+            m = new long[n][n];
+            shadow = new long[n][n];
             for (int i = 0; i < n; i++) {
-                m[i] = Arrays.stream(f.nextLine().trim().split("\\s+")).mapToInt(Integer::parseInt).toArray();
-                Arrays.fill(shadow[i], Integer.MAX_VALUE);
+                m[i] = Arrays.stream(f.nextLine().trim().split("\\s+")).mapToLong(Long::parseLong).toArray();
+                Arrays.fill(shadow[i], Long.MAX_VALUE);
             }
-            int min = recur(n/2,n/2,0,0);
+            long min = recur(n/2,n/2,0,0);
             if(found){
                 out.println(min);
             }
@@ -48,21 +48,21 @@ public class walld {
         }
         f.close();
     }
-    public int recur(int r, int c, int step, int total){
+    public long recur(int r, int c, long step, long total){
         if(r>=0&&r<m.length&&c>=0&&c<m[r].length){
-            if(total+m[r][c]>k) return Integer.MAX_VALUE;
-            if(k-total >= shadow[r][c]) return Integer.MAX_VALUE;
+            if(total+m[r][c]>k) return Long.MAX_VALUE;
+            if(k-total >= shadow[r][c]) return Long.MAX_VALUE;
             if(m[r][c] + total == k) {
                 found = true;
                 return step;
             }
             shadow[r][c] = k-total;
-            int minStep = Integer.MAX_VALUE;
+            long minStep = Long.MAX_VALUE;
             for (int i = 0; i < 4; i++) {
                 minStep = Math.min(minStep, recur(r+vr[i], c + vc[i],step+1,total+m[r][c]));
             }
             return minStep;
         }
-        return Integer.MAX_VALUE;
+        return Long.MAX_VALUE;
     }
 }

@@ -5,64 +5,432 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ec9422-2a87-4820-bb12-e2589fcf6dd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/sasha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Algorithm/Algorithm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/CodeWar2024.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob00-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob00-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob01-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob02-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob03-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob04-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob05-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob06-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-7-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-7-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-8-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob07-8-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob08-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob09-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob10-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob11-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob12-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob13-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob14-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob15-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob16-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob17-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob18-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob19-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob20-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob21-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob22-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-0-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-0-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-7-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-7-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-8-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-8-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-9-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob23-9-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob24-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob25-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-7-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-7-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-8-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob26-8-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob27-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob28-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob29-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob30-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-1-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-1-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-2-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-2-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-3-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-3-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-4-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-4-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-5-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-5-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-6-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-6-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-7-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-7-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-8-in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/prob31-8-out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/src/checkProb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CodeWar2024/src/maxconsecutiveoneIII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dulles_2015/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PWSH_2025/PWSH_2025.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProblemCheck/ProblemCheck.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../afs_3_19_25/uil_2009_dist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../codequest_2018/codequest_2018.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/ant.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/ant.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/binary.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/binary.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/bingo.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/bingo.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/checker.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/checker.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/curve.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/curve.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/drainage.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/drainage.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/math.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/math.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/ant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/binary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/bingo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/checker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/curve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/drainage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/math.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/src/stone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/stone.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/stone.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_1999_state/uil_1999_state.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2008_reg/uil_2008_reg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2012_state/uil_2012_state.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adrian.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arusha.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catherine.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diane.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facundo.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haru.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kristina.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lavanya.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manos.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/michaela.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pankaj.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shirley.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/frances.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2022_state/src/sanjay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/harmony.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/jared.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2024_reg/src/svetlana.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/atlas.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/becker.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/becker.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/brian.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/brian.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/chalam.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/chalam.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dean.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dean.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dominick.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dominick.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dorian.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/dorian.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/erbatur.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/erbatur.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/jacinta.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/jacinta.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/kassie.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/kassie.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/luke.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/luke.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/sage.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/sage.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/becker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/brian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/chalam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/dean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/dominick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/dorian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/erbatur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/jacinta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/kassie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_dist/src/sage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uil_2025_invB/uil_2025_invB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dulles_2015/navigation.in" beforeDir="false" afterPath="$PROJECT_DIR$/../Dulles_2015/navigation.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dulles_2015/src/navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dulles_2015/src/navigation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2022/src/Anday.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2022/src/Tang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2022/src/Tang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/ace.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/bart.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/bart.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/ben.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/ben.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/bethany.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/bethany.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/conrad.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/conrad.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/dilbert.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/dilbert.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/jason.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/jason.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/lina.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/lina.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/max.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/max.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/nicholas.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/nicholas.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/rufus.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/rufus.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/bart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/ben.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/bethany.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/conrad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/dilbert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/jason.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/lina.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/max.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/nicholas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/rufus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/src/victoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/ui_2024_state.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/victoria.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ui_2024_state/victoria.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2014_reg/src/volcano.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2014_reg/src/volcano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2014_state/src/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2014_state/src/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2015_dist1/src/thanks.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2015_dist1/src/thanks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2020_state/doors.out" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/doors.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/doors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/Doors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/star.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/star.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cywoods_comp_2023/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cywoods_comp_2023/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2019_reg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2019_reg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2020_state/src/Doors.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2020_state/src/Doors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2021_reg/src/guozhi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2021_reg/src/guozhi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2021_reg/src/kevin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2021_reg/src/kevin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2021_reg/src/olivia.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2021_reg/src/olivia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arusha.dat" beforeDir="false" afterPath="$PROJECT_DIR$/arusha.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catherine.dat" beforeDir="false" afterPath="$PROJECT_DIR$/catherine.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diane.dat" beforeDir="false" afterPath="$PROJECT_DIR$/diane.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facundo.dat" beforeDir="false" afterPath="$PROJECT_DIR$/facundo.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haru.dat" beforeDir="false" afterPath="$PROJECT_DIR$/haru.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kristina.dat" beforeDir="false" afterPath="$PROJECT_DIR$/kristina.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lavanya.dat" beforeDir="false" afterPath="$PROJECT_DIR$/lavanya.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manos.dat" beforeDir="false" afterPath="$PROJECT_DIR$/manos.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/michaela.dat" beforeDir="false" afterPath="$PROJECT_DIR$/michaela.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pankaj.dat" beforeDir="false" afterPath="$PROJECT_DIR$/pankaj.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shirley.dat" beforeDir="false" afterPath="$PROJECT_DIR$/shirley.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/diane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/haru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/haru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lavanya.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lavanya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/michaela.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/michaela.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pankaj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pankaj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shirley.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shirley.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2023_state/src/Vijay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_state/src/Vijay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/sasha.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/sasha.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/src/audrey.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/src/audrey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_reg/src/agustina.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_reg/src/agustina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_reg/src/krithika.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_reg/src/krithika.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_reg/src/michal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_reg/src/michal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_reg/src/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_state/src/andrei.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_state/src/andrei.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2022_state/src/urvashi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2022_state/src/urvashi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2023_dist/src/Vanessa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_dist/src/Vanessa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2023_dist/src/shreya.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2023_dist/src/shreya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/sofia.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/sofia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/tyler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/tyler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_invB/src/vika.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_invB/src/vika.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/src/paola.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/src/paola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2024_reg/src/wesley.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2024_reg/src/wesley.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uil_2025_invA/src/valery.java" beforeDir="false" afterPath="$PROJECT_DIR$/../uil_2025_invA/src/valery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,24 +451,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2QoQeTUYB2nHLLaWSeIFibLJY5n" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.diane.executor": "Run",
+    "Application.haru.executor": "Run",
+    "Application.lavanya.executor": "Run",
     "Application.manos.executor": "Run",
+    "Application.michaela.executor": "Run",
+    "Application.pankaj.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Intellij/uil/uil_2022_reg"
+    "last_opened_file_path": "D:/Intellij/uil/uil_2022_dist"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij\uil\uil_2022_dist" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

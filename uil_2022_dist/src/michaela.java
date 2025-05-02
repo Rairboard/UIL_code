@@ -11,20 +11,22 @@ public class michaela {
         //Scanner f = new Scanner(System.in);
         int times = f.nextInt();
 		f.nextLine();
-		String[] dictionary = {"-.....-","-....-.","-....--","-...-..","-...-.-","-...--.","-...---","-..-...","-..-..-","-..-.-.","-..-.--","-..--..","-..--.-","-..---.","-..----","-.-....","-.-...-","-.-..-.","-.-..--","-.-.-..","-.-.-.-","-.-.--.","-.-.---","-.--...","-.--..-","-.--.-.","-....."};
-        for(int t=1;t<=times;t++) {
-			System.out.print("Message #" + t + ": ");
-			String a =f.nextLine();
-			String s= "";
-			for (int i = 0; i < a.length(); i++) {
-				if(a.charAt(i) == ' '){
-					s+=dictionary[dictionary.length-1]+" ";
-				}else{
-					s+=dictionary[Character.toUpperCase(a.charAt(i)) - 65] + " ";
+		for (int asdf = 1; asdf <= times; asdf++) {
+			String ln = f.nextLine().toUpperCase();
+			System.out.print("Message #" + asdf + ": ");
+			for (int i = 0; i < ln.length(); i++) {
+				int n = ln.charAt(i);
+				String bit = Integer.toBinaryString(n);
+				for (int j = 0; j < bit.length(); j++) {
+					if(bit.charAt(j)=='1'){
+						System.out.print("-");
+					}
+					else System.out.print(".");
 				}
+				System.out.print(" ");
 			}
-			System.out.println(s.trim());
-        }
+			System.out.println();
+		}
         f.close();
     }
 }

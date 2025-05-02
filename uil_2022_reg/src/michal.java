@@ -82,19 +82,27 @@ public class michal {
 				"  |" +
 				"   " +
 				"***";
+//		out.println(Arrays.toString(num));
 		int times = f.nextInt();
 		f.nextLine();
 		for (int asdf = 1; asdf <= times; asdf++) {
-			String ln = f.nextLine().trim();
-//			out.println(ln);
-			for (int i = 0; i < 6; i++) {
-				out.print("*");
-				for (int j = 0; j < ln.length(); j++) {
-					int n = Integer.parseInt(ln.substring(j,j+1));
-
-                    out.print(num[n].substring(i * 3, i * 3 + 3));
+			String ln = f.nextLine();
+			String[] ans= new String[6];
+			Arrays.fill(ans, "");
+			for (int i = 0; i < ans.length; i++) {
+				ans[i]+="*";
+			}
+			for (int i = 0; i < ln.length(); i++) {
+				int index = Integer.parseInt(ln.substring(i,i+1));
+				for (int j = 0; j < 6; j++) {
+					ans[j]+=num[index].substring(j *3, j * 3 + 3);
 				}
-				out.println("*");
+			}
+			for (int i = 0; i < 6; i++) {
+				ans[i]+="*";
+			}
+			for (int i = 0; i < 6; i++) {
+				out.println(ans[i]);
 			}
 		}
         f.close();

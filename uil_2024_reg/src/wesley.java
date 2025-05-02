@@ -13,7 +13,7 @@ import static java.lang.Math.*;
 
 public class wesley {
     char[][] m;
-    int[][] shadow;
+    int[][][] shadow;
 
     public static void main(String[] args) throws Exception {
         new wesley().run();
@@ -24,57 +24,52 @@ public class wesley {
 //        Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        for (int asdf = 1; asdf <= times; asdf++) {
-            int r = f.nextInt(), c = f.nextInt(), sr = -1, sc = -1, er = -1,ec = -1;
+        for (int adsf = 0; adsf < times; adsf++) {
+            int row = f.nextInt(), col = f.nextInt();
+            int sr = -1, sc = -1;
             f.nextLine();
-            m = new char[r][c];
-            shadow = new int[r][c];
-            for (int i = 0; i < r; i++) {
-                String ln = f.nextLine().trim();
-                if (ln.contains("S")) {
-                    sr = i;
-                    sc = ln.indexOf("S");
+            List<int[]> exit = new ArrayList<>();
+            m = new char[row][col];
+            shadow = new int[5][row][col];
+            for (int i = 0; i < row; i++) {
+                m[i] = f.nextLine().trim().toCharArray();
+                for (int j = 0; j < m[i].length; j++) {
+                    if(m[i][j]=='S'){
+                        sr = i;
+                        sc = j;
+                    }
+                    else if(m[i][j] == 'E'){
+                        exit.add(new int[]{i,j});
+                    }
                 }
-                if (ln.contains("E")) {
-                    er = i;
-                    ec = ln.indexOf("E");
+                for (int j = 0; j < 5; j++) {
+                    Arrays.fill(shadow[j][i], Integer.MAX_VALUE);
                 }
-                m[i] = ln.toCharArray();
-                Arrays.fill(shadow[i],Integer.MAX_VALUE);
             }
-            recur(sr,sc,0,1);
-            if(shadow[er][ec]!=Integer.MAX_VALUE){
-                out.println("The Great Escape.");
+            recur(sr,sc,0,0);
+            int min = Integer.MAX_VALUE;
+            for (int i = 0; i < exit.size(); i++) {
+                for (int j = 0; j < 5; j++) {
+                    min = Math.min(shadow[j][exit.get(i)[0]][exit.get(i)[1]], min);
+                }
             }
-            else{
-                out.println("Guess I won't be home in time for dinner.");
-            }
+            if(min==Integer.MAX_VALUE) out.println("Guess I won't be home in time for dinner.");
+            else out.println("The Great Escape.");
         }
         f.close();
     }
-    public void recur(int r, int c, int step,int dimen){
-        try{
-            if ((m[r][c] == '1' && dimen != 1) || (m[r][c] == '3' && dimen != 3) || (m[r][c]=='5' && dimen!=5)) return;
-            if(m[r][c]=='#' && dimen !=2 && dimen != 4)return;
-            if(m[r][c]=='.' && dimen == 4) return;
-            if(m[r][c]=='S' && dimen == 4) return;
-            if(m[r][c]=='E'&&dimen==4) return;
-            if(step>=shadow[r][c]) return;
-            shadow[r][c] = step;
-            if(dimen==5){
-                dimen = 1;
-            }
-            else{
-                dimen++;
-            }
-            if(m[r][c]=='E'){
-
-            }
-            recur(r-1,c,step+1,dimen);
-            recur(r+1,c,step+1,dimen);
-            recur(r,c-1,step+1,dimen);
-            recur(r,c+1,step+1,dimen);
-        }
-        catch(Exception e){}
+    //SE.#135
+    public void recur(int r, int c, int level, int step){
+        if(r<0||c<0||r>=m.length||c>=m[r].length||level<0||level>=shadow.length) return;
+        if(level + 1 == 1 && "#35".contains(m[r][c]+"")) return;
+        if(level+1 == 3 && "#15".contains(m[r][c]+"")) return;
+        if(level+1 == 5 && "#13".contains(m[r][c]+"")) return;
+        if(level+1 == 4 && "SE.".contains(m[r][c]+"")) return;
+        if(step>=shadow[level][r][c]) return;
+        shadow[level][r][c] = step;
+        recur(r-1,c,(level+1)%5, step+1);
+        recur(r+1,c,(level+1)%5, step+1);
+        recur(r,c-1,(level+1)%5, step+1);
+        recur(r,c+1,(level+1)%5, step+1);
     }
 }

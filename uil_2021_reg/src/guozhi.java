@@ -15,10 +15,9 @@ public class guozhi {
     char[][]m;
     int[][][] shadow;
     HashSet<Integer>[][] block;
-    boolean found;
-    int min;
     public static void main(String[] args) throws Exception {
-        new guozhi().run();
+
+//        new guozhi().run();
     }
 
     public void run() throws Exception {
@@ -27,12 +26,10 @@ public class guozhi {
         int times = f.nextInt();
         f.nextLine();
         for (int asdf = 1; asdf <= times; asdf++) {
-            int row = f.nextInt(), col = f.nextInt(), sr = -1, sc = -1;
+            int row = f.nextInt(), col = f.nextInt(), sr = -1, sc = -1, er =-1, ec = -1;
             f.nextLine();
             m = new char[row][col];
             shadow = new int[4][row][col];
-            found = false;
-            min = Integer.MAX_VALUE;
             List<int[]> al = new ArrayList<>();
             block = new HashSet[row][col];
             for (int i = 0; i < row; i++) {
@@ -44,6 +41,10 @@ public class guozhi {
                     }
                     if("NSWE".contains(m[i][j]+"")){
                         al.add(new int[]{m[i][j],i,j});
+                    }
+                    if(m[i][j]=='H'){
+                        er = i;
+                        ec = j;
                     }
                 }
             }
@@ -58,137 +59,61 @@ public class guozhi {
                     Arrays.fill(shadow[i][j],Integer.MAX_VALUE);
                 }
             }
-            for (int i = 0; i < al.size(); i++) {
-                int r ,c;
-                char ch = (char)al.get(i)[0];
-                if(ch=='N'){
-                    for(r = al.get(i)[1],c = al.get(i)[2];r > -1;r--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(0);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c < col;c++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(1);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r < row;r++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(2);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c > -1;c--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(3);
-                    }
+            for(int[] ar : al){
+                char ch = (char)ar[0];
+                int dr = -1, dc =-1;
+                switch (ch){
+                    case 'N' -> {dr = -1;dc = 0;}
+                    case 'S' -> {dr = 1;dc = 0;}
+                    case 'E' -> {dr = 0;dc = 1;}
+                    case 'W' -> {dr = 0;dc = -1;}
                 }
-                else if(ch=='S'){
-                    for(r = al.get(i)[1],c = al.get(i)[2];r < row;r++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(0);
+
+                for (int i = 0; i < 4; i++) {
+                    int r = ar[1];
+                    int c = ar[2];
+                    while(in(r+dr, c+dc) && m[r+dr][c+dc]!='#'&&m[r+dr][c+dc]!='H'){
+                        r+=dr;
+                        c+=dc;
+                        block[r][c].add(i);
                     }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c > -1;c--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(1);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r > -1;r--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(2);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c < col;c++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(3);
-                    }
-                }
-                else if(ch=='E'){
-                    for(r = al.get(i)[1],c = al.get(i)[2];c < col;c++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(0);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r < row;r++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(1);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c > -1;c--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(2);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r > -1;r--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(3);
-                    }
-                }
-                else if(ch=='W'){
-                    for(r = al.get(i)[1],c = al.get(i)[2];c > -1;c--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(0);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r > -1;r--){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(1);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];c < col;c++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(2);
-                    }
-                    for(r = al.get(i)[1],c = al.get(i)[2];r < row;r++){
-                        if(m[r][c]=='#'||m[r][c]=='H'){
-                            break;
-                        }
-                        block[r][c].add(3);
-                    }
+                    int t = dr;
+                    dr = dc;
+                    dc = -t;
                 }
             }
-            recur(sr,sc,0,0);
-            out.println("Case #" + asdf + ": " + (found?min : -1));
+//            for (int i = 0; i < row; i++) {
+//                for (int j = 0; j < col; j++) {
+//                    out.println(block[i][j]);
+//                }
+//                out.println();
+//            }
+            recur(sr,sc,0);
+            int min = Integer.MAX_VALUE;
+            for (int i = 0; i < 4; i++) {
+                min = Math.min(min , shadow[i][er][ec]);
+            }
+            out.println("Case #" + asdf + ": " + (min==Integer.MAX_VALUE?-1:min));
         }
         f.close();
     }
-    public void recur(int r, int c, int time,int wait){
-        if (r >= 0 && c >= 0 && r < m.length && c < m[r].length && m[r][c] != '#' && !"NSWE".contains(m[r][c] + "") && time < shadow[time%4][r][c]) {
+    public boolean in(int r, int c){
+        return r>=0&&c>=0&&r<m.length&&c<m[r].length;
+    }
+    public void recur(int r, int c, int time){
+        if (in(r,c) && m[r][c] != '#' && !"NSWE".contains(m[r][c] + "") && time < shadow[time%4][r][c]) {
             if(block[r][c].contains(time%4)){
                 return;
             }
             shadow[time%4][r][c] = time;
             if(m[r][c]=='H'){
-                min = Math.min(min,time);
-                found = true;
                 return;
             }
-            if(wait<4){
-                recur(r,c,time+1,wait+1);
-            }
-            recur(r-1,c,time+1,wait);
-            recur(r+1,c,time+1,wait);
-            recur(r,c-1,time+1,wait);
-            recur(r,c+1,time+1,wait);
+            recur(r, c, time+1);
+            recur(r-1,c,time+1);
+            recur(r+1,c,time+1);
+            recur(r,c-1,time+1);
+            recur(r,c+1,time+1);
         }
     }
 }

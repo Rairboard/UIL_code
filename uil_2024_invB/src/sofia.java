@@ -14,6 +14,7 @@ import static java.lang.Math.*;
 public class sofia {
     Map<String,List<Edge>> m;
     boolean found;
+    Map<String,Integer> shadow;
     public static void main(String[] args) throws Exception {
         new sofia().run();
     }
@@ -21,54 +22,49 @@ public class sofia {
     public void run() throws Exception {
         Scanner f = new Scanner(new File(("sofia").toLowerCase() + ".dat"));
         //Scanner f = new Scanner(System.in);
-        int con = f.nextInt(), times = f.nextInt();
+        int flight = f.nextInt(), n = f.nextInt();
         f.nextLine();
         m = new HashMap<>();
-        for (int i = 0; i < con; i++) {
+        shadow = new HashMap<>();
+        HashSet<String> name = new HashSet<>();
+        for (int i = 0; i < flight; i++) {
             String a = f.next(), b = f.next();
-            int w = f.nextInt();
-            m.putIfAbsent(a,new ArrayList<>());
-            m.putIfAbsent(b,new ArrayList<>());
-            m.get(a).add(new Edge(b,w));
-            m.get(b).add(new Edge(a,w));
+            int c = f.nextInt();
+            f.nextLine();
+            m.putIfAbsent(a, new ArrayList<>());
+            m.putIfAbsent(b, new ArrayList<>());
+            m.get(b).add(new Edge(a, c));
+            m.get(a).add(new Edge(b, c));
+            name.add(a);
+            name.add(b);
         }
-        for (int i = 0; i < times; i++) {
-            String a = f.next(), b = f.next();
-            int w = f.nextInt();
-            HashSet<String> visited = new HashSet<>();
+        for (int i = 0; i < n; i++) {
             found = false;
-            recur(a,b,0,w,visited);
-            if(found){
-                out.println(b + " is always a good idea.");
+            for(String s : name){
+                shadow.put(s,Integer.MAX_VALUE);
             }
-            else{
-                out.println("There's no place like home.");
-            }
+            String a = f.next(), b = f.next();
+            int c = f.nextInt();
+            recur(a, 0);
+            if(shadow.get(b)==null || shadow.get(b)>c) out.println("There's no place like home.");
+            else out.println(b  + " is always a good idea.");
         }
         f.close();
     }
-    public void recur(String cur, String goal, int c, int lim,Set<String> visited){
-        if(!visited.contains(cur)){
-            if(cur.equals(goal)){
-                found = true;
-                return;
-            }
-            visited.add(cur);
-            if(m.get(cur)==null) return;
-            for(Edge e : m.get(cur)){
-                if(!visited.contains(e.to) && c + e.weight <= lim){
-                    recur(e.to, goal, c+e.weight,lim,visited);
-                }
-            }
-            visited.remove(cur);
+    public void recur(String cur, int cost){
+        if(cost>=shadow.get(cur)) return;
+        shadow.put(cur, cost);
+        if(m.get(cur)==null) return;
+        for(Edge e : m.get(cur)){
+            recur(e.to, cost + e.cost);
         }
     }
     class Edge {
         String to;
-        int weight;
-        public Edge(String b, int w){
-            to = b;
-            weight = w;
+        int cost;
+        public Edge(String t, int c){
+            to =t;
+            cost = c;
         }
     }
 }

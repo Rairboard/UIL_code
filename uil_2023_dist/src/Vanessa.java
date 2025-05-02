@@ -16,39 +16,65 @@ public class vanessa{
 	}
     public void run()throws Exception{
         Scanner f = new Scanner(new File("vanessa.dat"));
-//        Scanner f = new Scanner(System.in);
         int times = f.nextInt();
         f.nextLine();
-        while(times-->0){
+        for (int asdf = 0; asdf < times; asdf++) {
             int[] coin = Arrays.stream(f.nextLine().trim().split(",")).mapToInt(Integer::parseInt).toArray();
+            int target = f.nextInt();
             int n = coin.length;
-            int m = f.nextInt();
             f.nextLine();
             f.nextLine();
-            int[][] dp = new int[n+1][m+1];
+            int[][] dp = new int[n+1][target+1];
             dp[0][0] = 1;
-            for(int i = 1;i <= n;i++){
-                for(int j = 0;j <= m;j++){
-                    if(j==0){
-                        dp[i][j] = 0;
-                    }
-                    // adding all possible combinations using all of previous coins up until but excluding current coins
-                    dp[i][j]+=dp[i-1][j];
-
-                    // then check if current coin is smaller then current value if so can use current coin
-                    if(coin[i-1]<=j){
-
-                        // adding all of combinations using current coins
-                        dp[i][j]+=dp[i][j-coin[i-1]];
-
-                        // if finite coin => dp[i][j] += dp[i-1][j-coin[i-1]];
-                        // because finite so we have to move our coin position back to only use possible combinations from previous coin
+            for (int i = 1; i <= n; i++) {
+                for (int j = 0; j <= target; j++) {
+                    if(j==0) dp[i][j] = 1;
+                    else{
+                        dp[i][j] += dp[i-1][j];
+                        if(coin[i-1]<=j){
+                            dp[i][j] +=dp[i][j-coin[i-1]] ;
+                        }
                     }
                 }
             }
-            out.println(dp[n][m]);
+            out.println(dp[n][target]);
         }
     }
+//    public void run()throws Exception{
+//        Scanner f = new Scanner(new File("vanessa.dat"));
+////        Scanner f = new Scanner(System.in);
+//        int times = f.nextInt();
+//        f.nextLine();
+//        while(times-->0){
+//            int[] coin = Arrays.stream(f.nextLine().trim().split(",")).mapToInt(Integer::parseInt).toArray();
+//            int n = coin.length;
+//            int m = f.nextInt();
+//            f.nextLine();
+//            f.nextLine();
+//            int[][] dp = new int[n+1][m+1];
+//            dp[0][0] = 1;
+//            for(int i = 1;i <= n;i++){
+//                for(int j = 0;j <= m;j++){
+//                    if(j==0){
+//                        dp[i][j] = 0;
+//                    }
+//                    // adding all possible combinations using all of previous coins up until but excluding current coin
+//                    dp[i][j]+=dp[i-1][j];
+//
+//                    // then check if current coin is smaller then current value if so can use current coin
+//                    if(coin[i-1]<=j){
+//
+//                        // adding all of combinations using current coin
+//                        dp[i][j]+=dp[i][j-coin[i-1]];
+//
+//                        // if finite coin => dp[i][j] += dp[i-1][j-coin[i-1]];
+//                        // because finite so we have to move our coin position back to only use possible combinations from previous coin
+//                    }
+//                }
+//            }
+//            out.println(dp[n][m]);
+//        }
+//    }
 //    recursive solution optimize with dp[][]
 //	public void run() throws Exception{
 //	  Scanner f = new Scanner(new File(("vanessa").toLowerCase() + ".dat"));
